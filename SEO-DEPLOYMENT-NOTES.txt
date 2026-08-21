@@ -1,0 +1,8 @@
+MANJI STATIC SITE - SEO LAUNCH NOTES
+
+1. Remove or disable the Private Preview password gate before public launch. Search engines cannot meaningfully discover a page kept behind an access interstitial.
+2. The page uses a self-referencing relative canonical (href="/") so it resolves to whichever production domain hosts the build.
+3. Open Graph/Twitter image paths are root-relative. Verify your social crawler accepts them; if not, replace them with absolute production URLs.
+4. Once the final public hostname is known, create sitemap.xml with absolute URLs and add: Sitemap: https://YOUR-DOMAIN/sitemap.xml to robots.txt.
+5. Submit the public domain and sitemap to Google Search Console and Bing Webmaster Tools after launch.
+6. Organization facts in JSON-LD reference Manji's official entity at https://manji.co.ke/.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Add a Sitemap directive here once the final production hostname is known.

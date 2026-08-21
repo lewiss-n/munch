@@ -1,0 +1,1215 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en-KE">
+<head>
+  <!-- Product and brand imagery is stored as PNG files in assets/images/ for simple Vercel hosting. -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#062b78" name="theme-color"/>
+<title>Manji Biscuits Kenya | Duos, Sesamix &amp; Digestive</title>
+<meta name="description" content="Discover Manji biscuits from Kenya, featuring Duos cream cookies, Sesamix sesame crackers, Digestive biscuits and more favourites baked into generations."/>
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+<meta name="format-detection" content="telephone=yes"/>
+<link rel="canonical" href="/"/>
+<link rel="icon" type="image/png" href="assets/images/manji-logo.png"/>
+<link rel="preload" as="image" href="assets/images/digestive.png" fetchpriority="high"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_KE"/>
+<meta property="og:site_name" content="Manji Food Industries"/>
+<meta property="og:title" content="Manji Biscuits Kenya | Duos, Sesamix &amp; Digestive"/>
+<meta property="og:description" content="Discover Manji favourites including Duos cream cookies, Sesamix sesame crackers and Digestive biscuits."/>
+<meta property="og:url" content="/"/>
+<meta property="og:image" content="/assets/images/digestive.png"/>
+<meta property="og:image:alt" content="Manji Duos cream cookies pack"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Manji Biscuits Kenya | Duos, Sesamix &amp; Digestive"/>
+<meta name="twitter:description" content="Discover Manji favourites including Duos, Sesamix and Digestive biscuits."/>
+<meta name="twitter:image" content="/assets/images/digestive.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://manji.co.ke/#organization",
+      "name": "Manji Food Industries Limited",
+      "url": "https://manji.co.ke/",
+      "email": "info@manji.co.ke",
+      "telephone": "+254722203626",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Junction of Lunga Lunga & Likoni Road, Plot No. 4655, Industrial Area",
+        "addressLocality": "Nairobi",
+        "addressCountry": "KE"
+      },
+      "sameAs": [
+        "https://www.facebook.com/manjifoodindustriesltdKE/",
+        "https://www.instagram.com/manjifoodindustries1954/",
+        "https://www.linkedin.com/company/manji-food-industries-limited/"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "Manji Biscuits Kenya | Duos, Sesamix & Digestive",
+      "description": "A Manji Food Industries landing page featuring Duos cream cookies, Sesamix sesame crackers, Digestive biscuits and the wider Manji range.",
+      "about": {
+        "@id": "https://manji.co.ke/#organization"
+      },
+      "inLanguage": "en-KE"
+    },
+    {
+      "@type": "ItemList",
+      "name": "Featured Manji biscuits",
+      "numberOfItems": 3,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Manji Duos cream cookies"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Manji Sesamix sesame crackers"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Manji Digestive biscuits"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'manji-blue': '#062B78',
+            'manji-blue-2': '#0B3DA6',
+            'manji-yellow': '#FFC928',
+            'manji-red': '#E32335',
+            'manji-cream': '#FFF8E8',
+            'manji-ink': '#07142D'
+          },
+          fontFamily: {
+            display: ['Plus Jakarta Sans','ui-sans-serif','system-ui','sans-serif'],
+            body: ['Inter','ui-sans-serif','system-ui','sans-serif']
+          },
+          boxShadow: {
+            glow: '0 25px 80px rgba(255,201,40,.22)'
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+    :root { --blue:#062B78; --yellow:#FFC928; --red:#E32335; --cream:#FFF8E8; --ink:#07142D; }
+    * { box-sizing:border-box; }
+    html { background:var(--cream); }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,sans-serif; color:var(--ink); background:var(--cream); overflow-x:hidden; }
+    body.gated { overflow:hidden; }
+    ::selection { background:var(--yellow); color:var(--blue); }
+    .grain::after { content:""; pointer-events:none; position:absolute; inset:0; opacity:.09; mix-blend-mode:multiply; background-image:url("assets/images/grain-texture.png"); }
+    .dots { background-image:radial-gradient(rgba(6,43,120,.14) 1px, transparent 1px); background-size:18px 18px; }
+    .glass { background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,255,255,.48)); border:1px solid rgba(255,255,255,.66); box-shadow:0 18px 50px rgba(6,43,120,.08); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); }
+    .nav-glass { background:rgba(255,248,232,.76); border-bottom:1px solid rgba(6,43,120,.08); backdrop-filter:blur(18px) saturate(135%); -webkit-backdrop-filter:blur(18px) saturate(135%); }
+    .btn-sheen { position:relative; isolation:isolate; overflow:hidden; }
+    .btn-sheen::after { content:""; position:absolute; top:-70%; left:-35%; width:25%; height:250%; transform:rotate(20deg); background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent); transition:transform .65s cubic-bezier(.2,.8,.2,1); z-index:-1; }
+    .btn-sheen:hover::after { transform:translateX(650%) rotate(20deg); }
+    .hero-orb { filter:blur(2px); }
+    img { filter:none !important; box-shadow:none !important; }
+    img[alt="Manji - Est. 1954"] { display:block; background:transparent !important; }
+    .product-image { transform-origin:center center; filter:none !important; box-shadow:none !important; }
+    .hero-product { filter:none !important; box-shadow:none !important; }
+    .marquee-track { width:max-content; animation:marquee 30s linear infinite; }
+    @keyframes marquee { to { transform:translateX(-50%); } }
+    .reveal-line { overflow:hidden; }
+    .reveal-line > span { display:block; }
+    .stat-card:hover .stat-icon { transform:rotate(-8deg) scale(1.08); }
+    .hamburger-line { transition:transform .25s ease, opacity .25s ease; transform-origin:center; }
+    .menu-open .hamburger-line:nth-child(1){ transform:translateY(6px) rotate(45deg); }
+    .menu-open .hamburger-line:nth-child(2){ opacity:0; }
+    .menu-open .hamburger-line:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
+    /* Content visibility guard: animation may move these elements, but never hide them. */
+    #site .section-heading, #site .feature-card, #site .product-card,
+    #site .heritage-copy, #site .heritage-card, #site .stat-card, #site .contact-panel {
+      opacity:1 !important; visibility:visible !important;
+    }
+    .login-grid { background-image:linear-gradient(rgba(6,43,120,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(6,43,120,.08) 1px,transparent 1px); background-size:34px 34px; }
+    .shake { animation:shake .4s ease; }
+    @keyframes shake { 10%,90%{transform:translateX(-1px)} 20%,80%{transform:translateX(4px)} 30%,50%,70%{transform:translateX(-6px)} 40%,60%{transform:translateX(6px)} }
+    #site { transition:filter .6s ease, transform .6s ease, opacity .6s ease; }
+    body.gated #site { filter:blur(18px) saturate(.7); transform:scale(.985); opacity:.55; pointer-events:none; user-select:none; }
+    #loginGate { transition:opacity .55s ease, visibility .55s ease; }
+    #loginGate.hidden-gate { opacity:0; visibility:hidden; pointer-events:none; }
+    /* Motion-first featured trio: uses the existing Manji brand tokens only. */
+    .hero-stage { --mx:52%; --my:42%; transform:translateZ(0); }
+    .hero-stage-glow { background:radial-gradient(circle at var(--mx) var(--my),rgba(255,201,40,.42),rgba(255,255,255,.10) 29%,rgba(6,43,120,.04) 64%,transparent 76%); transition:background-position .25s ease-out; }
+    .hero-stage::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(125deg,rgba(255,255,255,.55),transparent 32%,transparent 69%,rgba(6,43,120,.06)); }
+    .hero-product-wrap { will-change:transform; transform-style:preserve-3d; }
+    .hero-product-wrap .hero-product { display:block; will-change:transform; }
+    .hero-product-tag { white-space:nowrap; }
+    .hero-seal { animation:heroSeal 5.4s ease-in-out infinite; }
+    @keyframes heroSeal { 0%,100%{ transform:translateX(-50%) rotate(-3deg) } 50%{ transform:translateX(-50%) translateY(-6px) rotate(3deg) } }
+    .trio-card { isolation:isolate; transform:translateZ(0); }
+    .trio-card::before { content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0; background:linear-gradient(135deg,rgba(255,201,40,.12),transparent 42%,rgba(6,43,120,.06)); transition:opacity .45s ease-out; }
+    .trio-card:hover::before { opacity:1; }
+    .trio-card-art { transform:translateZ(0); }
+    .trio-product { filter:none!important; will-change:transform; }
+    @media (max-width:1023px) {
+      #home { min-height:auto; }
+      #heroArt { margin-top:1.25rem; }
+    }
+    @media (max-width:639px) {
+      .hero-stage { border-radius:1.85rem; }
+      .hero-product-tag { padding:.38rem .65rem; letter-spacing:.12em; }
+      .hero-seal { bottom:3%; }
+    }
+
+    /* Floating Manji helper: same brand tokens, compact and non-intrusive. */
+    .chat-shell { right:max(1rem,env(safe-area-inset-right)); bottom:max(1rem,env(safe-area-inset-bottom)); }
+    .chat-panel { width:min(390px,calc(100vw - 2rem)); transform-origin:bottom right; }
+    .chat-panel.is-open { opacity:1; visibility:visible; pointer-events:auto; transform:translateY(0) scale(1); }
+    .chat-bubble { max-width:85%; border-radius:1.15rem; padding:.7rem .9rem; font-size:.875rem; line-height:1.45; }
+    .chat-bubble.bot { align-self:flex-start; color:var(--ink); background:#fff; border:1px solid rgba(6,43,120,.09); border-bottom-left-radius:.35rem; }
+    .chat-bubble.user { align-self:flex-end; color:#fff; background:var(--blue); border-bottom-right-radius:.35rem; }
+    .chat-launcher-ring { position:absolute; inset:-5px; border:2px solid rgba(255,201,40,.72); border-radius:9999px; animation:chatRing 2.2s ease-out infinite; }
+    @keyframes chatRing { 0%{transform:scale(.86);opacity:.9} 70%,100%{transform:scale(1.25);opacity:0} }
+    .chat-nudge { transition:opacity .28s ease,transform .28s ease,visibility .28s; }
+    .chat-nudge.is-hidden { opacity:0; transform:translateY(8px); visibility:hidden; }
+    .chat-quick { transition:transform .2s ease,background-color .2s ease,border-color .2s ease; }
+    .chat-quick:hover { transform:translateY(-1px); }
+    @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto} *,*::before,*::after{animation-duration:.001ms!important; animation-iteration-count:1!important; transition-duration:.001ms!important} .marquee-track{animation:none} .hero-seal{animation:none} .chat-launcher-ring{animation:none} }
+  </style>
+</head>
+<body class="gated antialiased">
+<!-- Front-end access gate. The plaintext password is not stored in this file; only a PBKDF2 verifier is. -->
+<section class="fixed inset-0 z-[100] overflow-hidden bg-manji-cream" id="loginGate">
+<div class="absolute inset-0 login-grid"></div>
+<div class="absolute -left-28 -top-28 size-[30rem] rounded-full bg-manji-yellow/45 blur-3xl"></div>
+<div class="absolute -bottom-48 -right-32 size-[34rem] rounded-full bg-manji-blue/30 blur-3xl"></div>
+<div class="relative flex h-full min-h-[100svh] w-full items-center justify-center px-5 py-6 sm:py-8">
+<div class="glass w-full max-w-md rounded-[2rem] p-7 sm:p-9">
+<div class="mb-8 flex items-center justify-between gap-4">
+<a aria-label="Manji home" class="inline-flex items-center gap-3" href="#">
+<img alt="Manji - Est. 1954" width="237" height="118" decoding="async" class="h-[58px] w-auto max-w-[150px] object-contain" src="assets/images/manji-logo.png"/>
+</a>
+<span class="rounded-full bg-manji-blue/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Private preview</span>
+</div>
+<div class="mb-7">
+<p class="mb-3 text-xs font-extrabold uppercase tracking-[.23em] text-manji-red">Access required</p>
+<p class="font-display text-3xl font-black leading-tight text-manji-ink sm:text-4xl">Enter the preview.</p>
+<p class="mt-3 text-sm leading-6 text-slate-600">Access the website prototype.</p>
+</div>
+<form class="space-y-4" id="loginForm" novalidate="">
+<label class="block text-sm font-bold text-manji-ink" for="passwordInput">Password</label>
+<div class="flex items-center rounded-2xl border border-manji-blue/10 bg-white/100 px-4 shadow-inner transition focus-within:border-manji-blue/30 focus-within:ring-4 focus-within:ring-manji-yellow/20" id="passwordWrap">
+<i class="size-4 shrink-0 text-manji-blue" data-lucide="lock-keyhole"></i>
+<input autocomplete="current-password" class="min-w-0 flex-1 bg-transparent px-3 py-4 text-base font-semibold text-manji-ink outline-none placeholder:text-slate-400" id="passwordInput" placeholder="Enter password" required="" type="password"/>
+<button aria-label="Show password" class="grid size-9 place-items-center rounded-full text-slate-500 transition hover:bg-manji-blue/5 hover:text-manji-blue" id="togglePassword" type="button"><i class="size-4" data-lucide="eye"></i></button>
+</div>
+<p aria-live="polite" class="min-h-5 text-sm font-semibold text-manji-red" id="loginError" role="alert"></p>
+<button class="btn-sheen flex w-full items-center justify-center gap-2 rounded-2xl bg-manji-blue px-5 py-4 font-bold text-white shadow-[0_16px_35px_rgba(6,43,120,.22)] transition duration-300 hover:-translate-y-0.5 hover:bg-manji-blue-2 active:translate-y-0" id="loginButton" type="submit">
+<span>Unlock website</span><i class="size-4" data-lucide="arrow-right"></i>
+</button>
+</form>
+<p class="mt-5 text-center text-[11px] leading-5 text-slate-400"></p>
+</div>
+</div>
+</section>
+<div id="site">
+<header class="nav-glass fixed inset-x-0 top-0 z-50 translate-y-0 transition-transform duration-300" id="navbar">
+<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-7 lg:px-8">
+<a aria-label="Manji home" class="group inline-flex items-center gap-3" href="#home">
+<img alt="Manji - Est. 1954" width="237" height="118" decoding="async" class="h-[48px] w-auto max-w-[128px] object-contain transition duration-300 group-hover:scale-[1.04]" src="assets/images/manji-logo.png"/>
+
+</a>
+<nav aria-label="Primary navigation" class="hidden items-center gap-8 lg:flex">
+<a class="text-sm font-bold text-manji-ink/75 transition hover:text-manji-blue" href="#range">Our range</a>
+<a class="text-sm font-bold text-manji-ink/75 transition hover:text-manji-blue" href="#heritage">Heritage</a>
+<a class="text-sm font-bold text-manji-ink/75 transition hover:text-manji-blue" href="#quality">Why Manji</a>
+<a class="text-sm font-bold text-manji-ink/75 transition hover:text-manji-blue" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="btn-sheen hidden items-center gap-2 rounded-full bg-manji-yellow px-5 py-3 text-sm font-extrabold text-manji-blue shadow-[0_10px_30px_rgba(255,201,40,.25)] transition hover:-translate-y-0.5 sm:inline-flex" href="#range">Taste the range <i class="size-4" data-lucide="arrow-down-right"></i></a>
+<button aria-expanded="false" aria-label="Open menu" class="grid size-11 place-items-center rounded-full border border-manji-blue/10 bg-white/60 lg:hidden" id="menuButton">
+<span class="flex w-5 flex-col gap-[4px]">
+<span class="hamburger-line h-[2px] w-full rounded bg-manji-blue"></span>
+<span class="hamburger-line h-[2px] w-full rounded bg-manji-blue"></span>
+<span class="hamburger-line h-[2px] w-full rounded bg-manji-blue"></span>
+</span>
+</button>
+</div>
+</div>
+<div class="grid max-h-0 overflow-hidden border-t border-manji-blue/5 bg-manji-cream/95 opacity-0 transition-all duration-300 lg:hidden" id="mobileMenu">
+<div class="mx-auto grid w-full max-w-7xl gap-1 px-5 py-4">
+<a class="rounded-xl px-4 py-3 font-bold text-manji-ink hover:bg-white" href="#range">Our range</a>
+<a class="rounded-xl px-4 py-3 font-bold text-manji-ink hover:bg-white" href="#heritage">Heritage</a>
+<a class="rounded-xl px-4 py-3 font-bold text-manji-ink hover:bg-white" href="#quality">Why Manji</a>
+<a class="rounded-xl px-4 py-3 font-bold text-manji-ink hover:bg-white" href="#contact">Contact</a>
+</div>
+</div>
+</header>
+<main>
+<section class="grain relative min-h-[100svh] overflow-hidden bg-manji-cream pt-24" id="home">
+<div class="hero-orb absolute -left-28 top-24 size-[24rem] rounded-full bg-manji-yellow/55 blur-3xl"></div>
+<div class="hero-orb absolute -right-44 top-10 size-[38rem] rounded-full bg-manji-blue/12 blur-3xl"></div>
+<div class="absolute inset-y-0 right-0 hidden w-[44%] dots opacity-35 lg:block"></div>
+<div class="relative mx-auto grid min-h-[calc(100svh-6rem)] max-w-7xl items-center gap-5 px-5 pb-9 pt-5 sm:px-7 lg:grid-cols-[.92fr_1.08fr] lg:px-8 lg:pb-10 lg:pt-7">
+<div class="relative z-20 max-w-2xl">
+<div class="hero-kicker mb-5 inline-flex items-center gap-2 rounded-full border border-manji-blue/10 bg-white/70 px-4 py-2 text-xs font-extrabold uppercase tracking-[.2em] text-manji-blue shadow-sm backdrop-blur">
+<span class="size-2 rounded-full bg-manji-red"></span> Kenya's classic biscuit maker
+</div>
+<h1 class="font-display text-[clamp(3.35rem,7.6vw,7.15rem)] font-black leading-[.88] tracking-[-.065em] text-manji-blue">
+<span class="reveal-line"><span>Crunch into</span></span>
+<span class="reveal-line"><span class="text-manji-red">a classic.</span></span>
+</h1>
+<p class="hero-copy mt-5 max-w-xl text-base font-medium leading-7 text-slate-600 sm:text-lg sm:leading-8">Manji Digestive takes centre stage with its familiar, satisfying crunch. A true everyday classic, made for simple snack moments and unmistakably Manji.</p>
+<div class="hero-actions mt-6 flex flex-col gap-3 sm:flex-row">
+<a class="btn-sheen inline-flex items-center justify-center gap-3 rounded-full bg-manji-blue px-7 py-4 font-extrabold text-white shadow-[0_18px_45px_rgba(6,43,120,.25)] transition duration-300 hover:-translate-y-1 hover:bg-manji-blue-2" href="#featured-trio">Discover Digestive <i class="size-5" data-lucide="arrow-down-right"></i></a>
+<a class="inline-flex items-center justify-center gap-3 rounded-full border border-manji-blue/15 bg-white/60 px-7 py-4 font-extrabold text-manji-blue backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-manji-blue/25 hover:bg-white" href="#range">Explore the range <i class="size-4" data-lucide="arrow-right"></i></a>
+</div>
+<div class="hero-proof mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 border-t border-manji-blue/10 pt-5 text-sm font-bold text-manji-blue/70">
+<span class="inline-flex items-center gap-2"><i class="size-4 text-manji-red" data-lucide="calendar-days"></i> Since 1954</span>
+<span class="inline-flex items-center gap-2"><i class="size-4 text-manji-red" data-lucide="map-pin"></i> Nairobi, Kenya</span>
+<span class="inline-flex items-center gap-2"><i class="size-4 text-manji-red" data-lucide="sparkles"></i> East African favourite</span>
+</div>
+</div>
+<div class="relative z-10 mx-auto h-[435px] w-full max-w-[690px] sm:h-[545px] lg:h-[610px]" id="heroArt" aria-label="Manji Digestive biscuits featured product">
+<div class="hero-stage absolute inset-[2%_0_0] overflow-hidden rounded-[2.25rem] border border-manji-blue/10 bg-white/45 shadow-[0_28px_90px_rgba(6,43,120,.12)] backdrop-blur-[2px] sm:rounded-[3rem]">
+<div class="hero-stage-glow absolute inset-0"></div>
+<div class="absolute -right-[12%] -top-[18%] size-[54%] rounded-full border-[42px] border-manji-yellow/45 sm:border-[62px]"></div>
+<div class="absolute -bottom-[17%] -left-[13%] size-[48%] rounded-full bg-manji-blue/10"></div>
+<div class="absolute left-1/2 top-[7%] -translate-x-1/2 font-display text-[clamp(3.35rem,9vw,8rem)] font-black leading-none tracking-[-.08em] text-manji-blue/[.06]">DIGESTIVE</div>
+<div class="hero-product-wrap hero-digestive absolute inset-0 z-30 flex items-center justify-center" data-depth="1">
+<div class="relative flex h-full w-full items-center justify-center px-3 sm:px-5 lg:px-2">
+<img alt="Manji Digestive biscuits pack" width="700" height="370" fetchpriority="high" decoding="async" class="hero-product w-[98%] max-w-none object-contain sm:w-[100%] lg:w-[106%]" src="assets/images/digestive.png"/>
+<div class="hero-product-tag absolute right-[7%] top-[13%] rounded-full bg-manji-red px-4 py-2 text-[10px] font-extrabold uppercase tracking-[.18em] text-white shadow-lg sm:text-xs">Digestive</div>
+</div>
+</div>
+<div class="hero-seal absolute bottom-[7%] left-1/2 z-40 grid size-[78px] -translate-x-1/2 place-items-center rounded-full border-[6px] border-manji-cream bg-manji-blue text-center shadow-[0_16px_35px_rgba(6,43,120,.24)] sm:size-[94px]">
+<div><span class="block font-display text-xl font-black leading-none text-manji-yellow sm:text-2xl">CLASSIC</span><span class="mt-1 block text-[8px] font-extrabold uppercase tracking-[.16em] text-white sm:text-[9px]">crunch</span></div>
+</div>
+</div>
+<div class="hero-motion-note absolute -bottom-1 right-2 hidden items-center gap-2 text-[10px] font-extrabold uppercase tracking-[.2em] text-manji-blue/45 sm:flex"><span class="h-px w-7 bg-manji-blue/20"></span> move / scroll</div>
+</div>
+</div>
+</section>
+<section class="relative overflow-hidden bg-[#f7f7f2] py-16 sm:py-20 lg:py-24" id="featured-trio">
+<div class="pointer-events-none absolute -left-28 top-0 size-72 rounded-full bg-manji-yellow/20 blur-3xl"></div>
+<div class="pointer-events-none absolute -right-20 bottom-0 size-80 rounded-full bg-manji-blue/10 blur-3xl"></div>
+<div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-8">
+<div class="trio-heading section-heading grid gap-6 border-b border-manji-blue/10 pb-8 lg:grid-cols-[1.12fr_.88fr] lg:items-end">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[.22em] text-manji-red">Featured favourites</p>
+<h2 class="mt-3 max-w-4xl font-display text-4xl font-black tracking-[-.05em] text-manji-blue sm:text-5xl lg:text-6xl">Three different cravings. One unmistakable Manji crunch.</h2>
+</div>
+<div class="lg:pb-1">
+<p class="max-w-xl text-base leading-7 text-slate-600">A closer look at Duos, Sesamix and Digestive, using current product information from Manji Food Industries' online catalogue.</p>
+<!-- <a class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-manji-blue transition hover:text-manji-red" href="https://manji.co.ke/mini-packs/" target="_blank" rel="noopener noreferrer">View Manji mini packs <i class="size-4" data-lucide="external-link"></i></a> -->
+</div>
+</div>
+<div class="mt-7 grid gap-5 lg:grid-cols-3">
+<article class="trio-card group relative overflow-hidden rounded-[2rem] border border-manji-blue/10 bg-white p-5 shadow-[0_18px_55px_rgba(6,43,120,.08)] sm:p-6">
+<div class="trio-card-art relative h-64 overflow-hidden rounded-[1.55rem] bg-manji-blue sm:h-72">
+<div class="dots absolute inset-0 opacity-20"></div>
+<div class="absolute -right-12 -top-12 size-40 rounded-full border-[28px] border-manji-yellow/45"></div>
+<img style="transform: translate(-50%, -20%); width: auto; height: 250px;" alt="Manji Duos cream cookies pack" width="700" height="370" loading="lazy" decoding="async" class="trio-product absolute left-1/2 top-1/2 w-[86%] max-w-none object-contain transition duration-700 ease-out group-hover:scale-[1.06]" src="assets/images/duos.png"/>
+<span class="absolute left-4 top-4 rounded-full bg-manji-yellow px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.18em] text-manji-blue">Cream cookies</span>
+</div>
+<div class="pt-6">
+<div class="flex items-start justify-between gap-4">
+<div><p class="text-xs font-extrabold uppercase tracking-[.2em] text-manji-red">01 / Duos</p><h3 class="mt-2 font-display text-3xl font-black tracking-[-.04em] text-manji-blue">Milk cream. Double crunch.</h3></div>
+<span class="grid size-10 shrink-0 place-items-center rounded-full bg-manji-blue text-white"><i class="size-4" data-lucide="cookie"></i></span>
+</div>
+<p class="mt-4 text-sm leading-6 text-slate-600">Manji lists Duos as cream cookies in its mini-pack range, available in 30g and 60g packs. Kenyan retail listings describe the 60g pack as a milk-cream-filled sandwich biscuit.</p>
+<div class="mt-5 flex items-center justify-between border-t border-manji-blue/10 pt-4"><span class="text-xs font-extrabold uppercase tracking-[.16em] text-manji-blue/55">30g · 60g</span><a class="text-sm font-extrabold text-manji-blue hover:text-manji-red" href="https://manji.co.ke/mini-packs/" target="_blank" rel="noopener noreferrer">Source ↗</a></div>
+</div>
+</article>
+<article class="trio-card group relative overflow-hidden rounded-[2rem] border border-manji-blue/10 bg-white p-5 shadow-[0_18px_55px_rgba(6,43,120,.08)] sm:p-6">
+<div class="trio-card-art relative h-64 overflow-hidden rounded-[1.55rem] bg-manji-yellow sm:h-72">
+<div class="dots absolute inset-0 opacity-25"></div>
+<div class="absolute -bottom-16 -left-10 size-44 rounded-full bg-manji-red/20"></div>
+<img style="transform: translate(-50%, -40%); width: auto; height: 300px;" alt="Manji Sesamix sesame crackers pack" width="612" height="408" loading="lazy" decoding="async" class="trio-product absolute left-1/2 top-1/2 w-[78%] max-w-none object-contain transition duration-700 ease-out group-hover:scale-[1.06]" src="assets/images/sesamix.png"/>
+<span class="absolute left-4 top-4 rounded-full bg-manji-blue px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.18em] text-white">Simsim crackers</span>
+</div>
+<div class="pt-6">
+<div class="flex items-start justify-between gap-4">
+<div><p class="text-xs font-extrabold uppercase tracking-[.2em] text-manji-red">02 / Sesamix</p><h3 class="mt-2 font-display text-3xl font-black tracking-[-.04em] text-manji-blue">Golden sesame goodness.</h3></div>
+<span class="grid size-10 shrink-0 place-items-center rounded-full bg-manji-yellow text-manji-blue"><i class="size-4" data-lucide="sparkles"></i></span>
+</div>
+<p class="mt-4 text-sm leading-6 text-slate-600">Sesamix appears in Manji's mini-pack range at 33g. Manji describes the product as simsim crackers baked to a golden crunch with sesame goodness.</p>
+<div class="mt-5 flex items-center justify-between border-t border-manji-blue/10 pt-4"><span class="text-xs font-extrabold uppercase tracking-[.16em] text-manji-blue/55">33g mini pack</span><a class="text-sm font-extrabold text-manji-blue hover:text-manji-red" href="https://manji.co.ke/mini-packs/" target="_blank" rel="noopener noreferrer">Source ↗</a></div>
+</div>
+</article>
+<article class="trio-card group relative overflow-hidden rounded-[2rem] border border-manji-blue/10 bg-white p-5 shadow-[0_18px_55px_rgba(6,43,120,.08)] sm:p-6">
+<div class="trio-card-art relative h-64 overflow-hidden rounded-[1.55rem] bg-manji-red sm:h-72">
+<div class="dots absolute inset-0 opacity-20"></div>
+<div class="absolute -right-16 bottom-[-3rem] size-48 rounded-full border-[30px] border-manji-yellow/35"></div>
+<img style="transform: translate(-50%, -40%); width: auto; height: 250px;" alt="Manji Digestive biscuits pack" width="700" height="370" loading="lazy" decoding="async" class="trio-product absolute left-1/2 top-1/2 w-[86%] max-w-none object-contain transition duration-700 ease-out group-hover:scale-[1.06]" src="assets/images/digestive.png"/>
+<span class="absolute left-4 top-4 rounded-full bg-manji-cream px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.18em] text-manji-blue">Traditional range</span>
+</div>
+<div class="pt-6">
+<div class="flex items-start justify-between gap-4">
+<div><p class="text-xs font-extrabold uppercase tracking-[.2em] text-manji-red">03 / Digestive</p><h3 class="mt-2 font-display text-3xl font-black tracking-[-.04em] text-manji-blue">A familiar everyday staple.</h3></div>
+<span class="grid size-10 shrink-0 place-items-center rounded-full bg-manji-red text-white"><i class="size-4" data-lucide="wheat"></i></span>
+</div>
+<p class="mt-4 text-sm leading-6 text-slate-600">Digestive sits in Manji's traditional biscuit range in 200g and 450g formats, while the current mini-pack catalogue also lists a compact 20g pack.</p>
+<div class="mt-5 flex items-center justify-between border-t border-manji-blue/10 pt-4"><span class="text-xs font-extrabold uppercase tracking-[.16em] text-manji-blue/55">20g · 200g · 450g</span><a class="text-sm font-extrabold text-manji-blue hover:text-manji-red" href="https://manji.co.ke/traditional/" target="_blank" rel="noopener noreferrer">Source ↗</a></div>
+</div>
+</article>
+</div>
+<!-- <p class="mt-6 text-xs leading-5 text-slate-500">Pack formats checked against Manji Food Industries' current Mini Packs and Traditional Biscuits catalogue pages.</p> -->
+</div>
+</section>
+<section class="overflow-hidden border-y border-manji-blue/10 bg-manji-blue py-4 text-manji-cream">
+<div class="marquee-track flex items-center gap-4 pr-4 text-sm font-extrabold uppercase tracking-[.22em]">
+<div class="flex items-center gap-4"><span>Biscuits</span><span class="text-manji-yellow">✦</span><span>Cookies</span><span class="text-manji-yellow">✦</span><span>Wafers</span><span class="text-manji-yellow">✦</span><span>Cakes</span><span class="text-manji-yellow">✦</span><span>Tea-time classics since 1954</span><span class="text-manji-yellow">✦</span></div>
+<div aria-hidden="true" class="flex items-center gap-4"><span>Biscuits</span><span class="text-manji-yellow">✦</span><span>Cookies</span><span class="text-manji-yellow">✦</span><span>Wafers</span><span class="text-manji-yellow">✦</span><span>Cakes</span><span class="text-manji-yellow">✦</span><span>Tea-time classics since 1954</span><span class="text-manji-yellow">✦</span></div>
+</div>
+</section>
+<section class="relative overflow-hidden bg-[#f7f7f2] py-14 sm:py-16 lg:py-20" id="quality">
+<div class="pointer-events-none absolute -left-24 top-20 size-72 rounded-full bg-manji-yellow/25 blur-3xl"></div>
+<div class="pointer-events-none absolute -right-20 top-1/3 size-80 rounded-full bg-manji-red/10 blur-3xl"></div>
+<div class="pointer-events-none absolute bottom-0 left-1/2 h-44 w-[70%] -translate-x-1/2 rounded-full bg-manji-blue/5 blur-3xl"></div>
+<div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-8">
+<div class="section-heading grid border-b border-manji-blue/10 lg:grid-cols-[1.15fr_.85fr] lg:items-end gap-5 pb-7">
+<div>
+<p class="text-xs font-extrabold uppercase tracking-[.22em] text-manji-red">Why Manji</p>
+<h2 class="mt-3 max-w-4xl font-display text-4xl font-black tracking-[-.05em] text-manji-blue sm:text-5xl lg:text-6xl">Made to belong in the moments that make every day.</h2>
+</div>
+<div class="lg:pb-1">
+<p class="max-w-xl text-base leading-7 text-slate-600">For generations, Manji has turned familiar ingredients into biscuits, cookies, wafers and snack packs that feel at home on the breakfast table, in the lunchbox and everywhere in between.</p>
+<div class="mt-5 flex flex-wrap gap-2">
+<span class="rounded-full bg-manji-blue px-4 py-2 text-xs font-extrabold text-white">Since 1954</span>
+<span class="rounded-full bg-manji-yellow px-4 py-2 text-xs font-extrabold text-manji-blue">Proudly Kenyan</span>
+<span class="rounded-full bg-white px-4 py-2 text-xs font-extrabold text-manji-blue ring-1 ring-manji-blue/10">Made for sharing</span>
+</div>
+</div>
+</div>
+<div class="mt-6 grid gap-x-5 gap-y-0 lg:grid-cols-12">
+<article class="section-heading relative overflow-hidden rounded-[2.5rem] bg-manji-blue p-7 text-white sm:p-9 lg:col-span-12 lg:min-h-[410px] lg:p-10 xl:p-12">
+<div class="dots pointer-events-none absolute inset-0 opacity-20"></div>
+<div class="pointer-events-none absolute -right-20 -top-24 size-72 rounded-full border-[54px] border-manji-yellow/20"></div>
+<div class="pointer-events-none absolute -bottom-28 left-[38%] size-64 rounded-full bg-manji-red/20 blur-3xl"></div>
+<div class="relative z-10 grid h-full gap-8 lg:grid-cols-[1.12fr_.88fr] lg:items-stretch lg:gap-10 xl:gap-14">
+<div class="flex flex-col justify-between py-1">
+<div>
+<div class="flex items-center gap-3">
+<span class="grid size-11 place-items-center rounded-2xl bg-manji-yellow text-manji-blue"><i class="size-5" data-lucide="heart-handshake"></i></span>
+<p class="text-xs font-extrabold uppercase tracking-[.2em] text-manji-yellow">A brand people grow up with</p>
+</div>
+<h3 class="mt-7 max-w-2xl font-display text-3xl font-black tracking-[-.04em] sm:text-4xl lg:text-5xl">A familiar crunch, made fresh for every generation.</h3>
+<p class="mt-5 max-w-2xl text-base leading-7 text-blue-50/80">The products change with tastes and occasions, but the promise stays simple: approachable flavour, dependable quality and something worth passing around.</p>
+</div>
+<div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/15 pt-6 text-sm font-bold text-blue-50/75 lg:mt-10">
+<span class="inline-flex items-center gap-2"><i class="size-4 text-manji-yellow" data-lucide="coffee"></i> Tea-time classics</span>
+<span class="inline-flex items-center gap-2"><i class="size-4 text-manji-yellow" data-lucide="users"></i> Made for sharing</span>
+<span class="inline-flex items-center gap-2"><i class="size-4 text-manji-yellow" data-lucide="sparkles"></i> Familiar favourites</span>
+</div>
+</div>
+<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:grid-rows-[auto_1fr]">
+<div class="rounded-[1.7rem] border border-white/15 bg-white/10 p-5 backdrop-blur-sm sm:p-6">
+<p class="font-display text-4xl font-black text-manji-yellow">1954</p>
+<p class="mt-2 text-xs font-bold uppercase tracking-[.16em] text-blue-50/70">Where the story begins</p>
+</div>
+<div class="rounded-[1.7rem] border border-white/15 bg-white/10 p-5 backdrop-blur-sm sm:p-6">
+<p class="font-display text-3xl font-black text-manji-yellow">Kenya</p>
+<p class="mt-2 text-xs font-bold uppercase tracking-[.16em] text-blue-50/70">Homegrown at heart</p>
+</div>
+<div class="rounded-[1.7rem] bg-white p-5 text-manji-blue sm:col-span-2 sm:p-6 lg:flex lg:flex-col lg:justify-center">
+<p class="text-xs font-extrabold uppercase tracking-[.18em] text-manji-red">What stays constant</p>
+<div class="mt-4 grid gap-x-6 gap-y-4 text-sm font-bold sm:grid-cols-2">
+<div class="flex items-center gap-3"><i class="size-4 shrink-0 text-manji-red" data-lucide="check"></i><span>Reliable everyday quality</span></div>
+<div class="flex items-center gap-3"><i class="size-4 shrink-0 text-manji-red" data-lucide="check"></i><span>Flavours people know</span></div>
+<div class="flex items-center gap-3"><i class="size-4 shrink-0 text-manji-red" data-lucide="check"></i><span>Formats for every occasion</span></div>
+<div class="flex items-center gap-3"><i class="size-4 shrink-0 text-manji-red" data-lucide="check"></i><span>A distinctly local spirit</span></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div style="margin-top: 20px;" class="grid gap-5 sm:grid-cols-2 lg:col-span-12 lg:grid-cols-4">
+<article class="feature-card group flex min-h-[260px] flex-col rounded-[2.2rem] border border-manji-blue/10 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-manji-yellow sm:p-7">
+<div class="flex items-start justify-between gap-5">
+<div class="grid size-12 shrink-0 place-items-center rounded-2xl bg-manji-yellow text-manji-blue"><i class="size-5" data-lucide="wheat"></i></div>
+<span class="text-xs font-black tracking-[.18em] text-manji-blue/25">01</span>
+</div>
+<div class="mt-auto pt-6">
+<h3 class="font-display text-2xl font-black text-manji-blue">Heritage recipes</h3>
+<p class="mt-3 text-sm leading-6 text-slate-600">Classic biscuit formats designed around the rituals people already love - tea breaks, sharing plates and the simple pleasure of a familiar bite.</p>
+</div>
+</article>
+<article class="feature-card group flex min-h-[260px] flex-col rounded-[2.2rem] bg-manji-red p-6 text-white transition duration-300 hover:-translate-y-1 sm:p-7">
+<div class="flex items-start justify-between gap-5">
+<div class="grid size-12 shrink-0 place-items-center rounded-2xl bg-white text-manji-red"><i class="size-5" data-lucide="badge-check"></i></div>
+<span class="text-xs font-black tracking-[.18em] text-white/35">02</span>
+</div>
+<div class="mt-auto pt-6">
+<h3 class="font-display text-2xl font-black">Quality-led</h3>
+<p class="mt-3 text-sm leading-6 text-white/80">Consistency matters. From flavour to texture to the pack in your hand, the experience is built to feel dependable every time.</p>
+</div>
+</article>
+<article class="feature-card group flex min-h-[260px] flex-col rounded-[2.2rem] bg-manji-yellow p-6 text-manji-blue transition duration-300 hover:-translate-y-1 sm:p-7">
+<div class="flex items-start justify-between gap-5">
+<div class="grid size-12 shrink-0 place-items-center rounded-2xl bg-manji-blue text-white"><i class="size-5" data-lucide="map-pinned"></i></div>
+<span class="text-xs font-black tracking-[.18em] text-manji-blue/25">03</span>
+</div>
+<div class="mt-auto pt-6">
+<h3 class="font-display text-2xl font-black">Kenyan at heart</h3>
+<p class="mt-3 text-sm leading-6 text-manji-blue/75">A homegrown name shaped by local tastes, family routines and the everyday culture of sharing food with the people around you.</p>
+</div>
+</article>
+<article class="feature-card group flex min-h-[260px] flex-col rounded-[2.2rem] border border-manji-blue/10 bg-[#eef3ff] p-6 transition duration-300 hover:-translate-y-1 hover:border-manji-blue/25 sm:p-7">
+<div class="flex items-start justify-between gap-5">
+<div class="grid size-12 shrink-0 place-items-center rounded-2xl bg-white text-manji-blue ring-1 ring-manji-blue/10"><i class="size-5" data-lucide="sparkles"></i></div>
+<span class="text-xs font-black tracking-[.18em] text-manji-blue/25">04</span>
+</div>
+<div class="mt-auto pt-6">
+<h3 class="font-display text-2xl font-black text-manji-blue">A world of choice</h3>
+<p class="mt-3 text-sm leading-6 text-slate-600">From crisp wafers and buttery cookies to chocolate-coated favourites and everyday biscuits, there is a Manji mood for every craving.</p>
+</div>
+</article>
+</div>
+</div>
+<div class="grid gap-5 lg:grid-cols-[1.35fr_.65fr] mt-4">
+<article class="section-heading rounded-[2.2rem] bg-white p-6 ring-1 ring-manji-blue/10 sm:p-8">
+<div class="flex flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
+<div class="max-w-xl">
+<p class="text-xs font-extrabold uppercase tracking-[.2em] text-manji-red">A range for real life</p>
+<h3 class="mt-2 font-display text-3xl font-black tracking-[-.04em] text-manji-blue">One brand. Plenty of ways to crunch.</h3>
+</div>
+<a class="inline-flex w-fit items-center gap-2 rounded-full bg-manji-blue px-5 py-3 text-sm font-extrabold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-manji-red" href="#range">Explore the range <i class="size-4" data-lucide="arrow-down-right"></i></a>
+</div>
+<div class="mt-7 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+<div class="rounded-[1.5rem] bg-manji-cream p-5">
+<i class="size-5 text-manji-red" data-lucide="cookie"></i>
+<p class="mt-4 font-display text-xl font-black text-manji-blue">Biscuits</p>
+<p class="mt-1 text-sm leading-5 text-slate-500">Everyday favourites for tea, breaks and sharing.</p>
+</div>
+<div class="rounded-[1.5rem] bg-[#fff5d5] p-5">
+<i class="size-5 text-manji-blue" data-lucide="circle-dot"></i>
+<p class="mt-4 font-display text-xl font-black text-manji-blue">Cookies</p>
+<p class="mt-1 text-sm leading-5 text-slate-500">Buttery, nutty and chocolate-filled treats.</p>
+</div>
+<div class="rounded-[1.5rem] bg-[#fff0ee] p-5">
+<i class="size-5 text-manji-red" data-lucide="layers-3"></i>
+<p class="mt-4 font-display text-xl font-black text-manji-blue">Wafers</p>
+<p class="mt-1 text-sm leading-5 text-slate-500">Light, crisp layers with creamy flavour.</p>
+</div>
+<div class="rounded-[1.5rem] bg-[#edf3ff] p-5">
+<i class="size-5 text-manji-blue" data-lucide="package-open"></i>
+<p class="mt-4 font-display text-xl font-black text-manji-blue">Snack packs</p>
+<p class="mt-1 text-sm leading-5 text-slate-500">Portable favourites made for on-the-go moments.</p>
+</div>
+</div>
+</article>
+<article class="section-heading relative overflow-hidden rounded-[2.2rem] bg-manji-yellow p-7 text-manji-blue sm:p-8">
+<div class="pointer-events-none absolute -bottom-12 -right-12 size-40 rounded-full border-[28px] border-white/40"></div>
+<div class="relative z-10 flex h-full flex-col">
+<div class="grid size-12 place-items-center rounded-2xl bg-manji-red text-white"><i class="size-5" data-lucide="coffee"></i></div>
+<p class="mt-7 text-xs font-extrabold uppercase tracking-[.2em] text-manji-red">Made for real moments</p>
+<p class="mt-3 font-display text-3xl font-black tracking-[-.04em]">Morning tea. School break. Road trip. Family table.</p>
+<p class="mt-4 text-sm leading-6 text-manji-blue/70">Whatever the moment looks like, there is room for a little crunch in it.</p>
+<div class="mt-8 flex flex-wrap gap-2 lg:mt-auto lg:pt-10">
+<span class="rounded-full bg-white/75 px-4 py-2 text-xs font-extrabold">Everyday crunch</span>
+<span class="rounded-full bg-white/75 px-4 py-2 text-xs font-extrabold">Bold flavours</span>
+<span class="rounded-full bg-white/75 px-4 py-2 text-xs font-extrabold">Made to share</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="relative overflow-hidden bg-manji-cream py-20 sm:py-24" id="range">
+<div class="absolute right-[-8rem] top-10 size-[28rem] rounded-full bg-manji-yellow/25 blur-3xl"></div>
+<div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-8">
+<div class="section-heading flex flex-col justify-between lg:flex-row lg:items-end gap-5">
+<div class="max-w-2xl">
+<p class="text-xs font-extrabold uppercase tracking-[.22em] text-manji-red">Product universe</p>
+<h2 class="mt-4 font-display text-4xl font-black tracking-[-.045em] text-manji-blue sm:text-6xl">Pick your crunch.</h2>
+<p class="mt-4 max-w-xl text-base leading-7 text-slate-600">A flexible product gallery that can grow with the catalogue while keeping each pack visually distinct.</p>
+</div>
+<div aria-label="Product filters" class="flex flex-wrap gap-2" id="filters">
+<button class="filter-btn active rounded-full bg-manji-blue px-4 py-2.5 text-sm font-bold text-white transition hover:-translate-y-0.5" data-filter="All">All</button>
+<button class="filter-btn rounded-full border border-manji-blue/12 bg-white/70 px-4 py-2.5 text-sm font-bold text-manji-blue transition hover:-translate-y-0.5 hover:border-manji-blue/25" data-filter="Biscuits">Biscuits</button>
+<button class="filter-btn rounded-full border border-manji-blue/12 bg-white/70 px-4 py-2.5 text-sm font-bold text-manji-blue transition hover:-translate-y-0.5 hover:border-manji-blue/25" data-filter="Cookies">Cookies</button>
+<button class="filter-btn rounded-full border border-manji-blue/12 bg-white/70 px-4 py-2.5 text-sm font-bold text-manji-blue transition hover:-translate-y-0.5 hover:border-manji-blue/25" data-filter="Wafers">Wafers</button>
+<button class="filter-btn rounded-full border border-manji-blue/12 bg-white/70 px-4 py-2.5 text-sm font-bold text-manji-blue transition hover:-translate-y-0.5 hover:border-manji-blue/25" data-filter="Snacks">Snacks</button>
+</div>
+</div>
+<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-9" id="productGrid">
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Wafers">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-yellow-300/80 to-amber-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Banana Wafers" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/banana-wafers.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Wafers</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Banana Wafers</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">Classic pack</p>
+</div>
+<button aria-label="Highlight Banana Wafers" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Biscuits">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-emerald-200/70 to-lime-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Big Family" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/big-family.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Biscuits</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Big Family</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">75g</p>
+</div>
+<button aria-label="Highlight Big Family" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Biscuits">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-amber-200/50 to-stone-100 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Bourbon Chocolate Cream" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/bourbon-chocolate-cream.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Biscuits</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Bourbon Chocolate Cream</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">200g</p>
+</div>
+<button aria-label="Highlight Bourbon Chocolate Cream" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Cookies">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-sky-200/70 to-blue-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Pure Butter Almond Cookies" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/pure-butter-almond-cookies.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Cookies</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Pure Butter Almond Cookies</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">150g</p>
+</div>
+<button aria-label="Highlight Pure Butter Almond Cookies" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Cookies">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-yellow-200/70 to-orange-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Butter Cashew Cookies" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/butter-cashew-cookies.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Cookies</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Butter Cashew Cookies</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">450g jar</p>
+</div>
+<button aria-label="Highlight Butter Cashew Cookies" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Snacks">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-orange-200/70 to-amber-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Cake Snack Orange &amp; Choco" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/cake-snack-orange-choco.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Snacks</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Cake Snack Orange &amp; Choco</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">Single serve</p>
+</div>
+<button aria-label="Highlight Cake Snack Orange &amp; Choco" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Biscuits">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-fuchsia-200/60 to-purple-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Choco Fingers" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/choco-fingers.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Biscuits</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Choco Fingers</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">125g</p>
+</div>
+<button aria-label="Highlight Choco Fingers" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Cookies">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-amber-200/60 to-stone-100 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Choco Chip Cookies" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/choco-chip-cookies.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Cookies</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Choco Chip Cookies</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">Family box</p>
+</div>
+<button aria-label="Highlight Choco Chip Cookies" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Biscuits">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-amber-200/50 to-orange-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Chocolate Biscuits" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/chocolate-biscuits.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Biscuits</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Chocolate Biscuits</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">150g</p>
+</div>
+<button aria-label="Highlight Chocolate Biscuits" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Biscuits">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-orange-200/60 to-amber-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Chocolate Digestive" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/chocolate-digestive.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Biscuits</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Chocolate Digestive</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">150g</p>
+</div>
+<button aria-label="Highlight Chocolate Digestive" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Wafers">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-yellow-200/70 to-rose-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Chocolate Wafers" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/chocolate-wafers.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Wafers</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Chocolate Wafers</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">Classic pack</p>
+</div>
+<button aria-label="Highlight Chocolate Wafers" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Biscuits">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-stone-200/70 to-orange-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Chocolate Cream" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/chocolate-cream.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Biscuits</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Chocolate Cream</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">160g</p>
+</div>
+<button aria-label="Highlight Chocolate Cream" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+<article class="product-card group relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-[0_20px_55px_rgba(10,34,90,.08)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(10,34,90,.16)]" data-category="Biscuits">
+<div class="absolute inset-x-5 top-5 h-44 rounded-[1.6rem] bg-gradient-to-br from-yellow-200/70 to-indigo-50 opacity-70 transition duration-500 group-hover:scale-[1.03]"></div>
+<div class="relative flex h-48 items-center justify-center p-3">
+<img alt="Manji Chox" class="product-image max-h-40 w-auto max-w-[92%] object-contain transition duration-500 group-hover:scale-105 group-hover:-rotate-1" decoding="async" loading="lazy" src="assets/images/manji-chox.png"/>
+</div>
+<div class="relative mt-3 flex items-end justify-between gap-4">
+<div>
+<p class="mb-2 inline-flex rounded-full bg-manji-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-manji-blue">Biscuits</p>
+<h3 class="font-display text-xl font-black leading-tight text-slate-950">Manji Chox</h3>
+<p class="mt-1 text-sm font-medium text-slate-500">70g</p>
+</div>
+<button aria-label="Highlight Manji Chox" class="product-nudge grid size-11 shrink-0 place-items-center rounded-full bg-manji-blue text-white transition duration-300 hover:rotate-6 hover:scale-110 hover:bg-manji-red" type="button">
+<i class="size-4" data-lucide="arrow-up-right"></i>
+</button>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="relative overflow-hidden bg-manji-blue text-white py-20 sm:py-24" id="heritage">
+<div class="absolute inset-0 dots opacity-[.12]"></div>
+<div class="absolute -left-32 top-1/3 size-[28rem] rounded-full bg-manji-yellow/20 blur-3xl"></div>
+<div class="absolute -right-40 top-0 size-[34rem] rounded-full bg-manji-red/15 blur-3xl"></div>
+<div class="relative mx-auto grid max-w-7xl px-5 sm:px-7 lg:grid-cols-[1fr_.95fr] lg:px-8 lg:items-center gap-10">
+<div class="heritage-copy max-w-2xl">
+<p class="text-xs font-extrabold uppercase tracking-[.22em] text-manji-yellow">Our heritage</p>
+<h2 class="mt-4 font-display text-5xl font-black leading-[.95] tracking-[-.05em] sm:text-7xl">Seven decades of snack memories.</h2>
+<p class="mt-6 max-w-xl text-base leading-8 text-blue-100/85">Manji traces its biscuit heritage to the 1950s in Nairobi. Traditional favourites such as Family, Marie and Shortcake helped make the brand a fixture of tea-time culture, while new formats continue that story for a new generation.</p>
+<button aria-controls="historyModal" aria-haspopup="dialog" class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3.5 font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-manji-blue focus:outline-none focus:ring-4 focus:ring-manji-yellow/30 mt-6" id="historyModalOpen" type="button">Read the original history <i class="size-4" data-lucide="book-open-text"></i></button>
+</div>
+<div class="relative min-h-[390px]">
+<div class="heritage-card absolute left-0 top-4 w-[78%] rotate-[-4deg] rounded-[2.2rem] bg-manji-yellow p-7 text-manji-blue shadow-[0_35px_80px_rgba(0,0,0,.22)] sm:p-9">
+<p class="text-xs font-extrabold uppercase tracking-[.2em]">1954</p><p class="mt-3 font-display text-4xl font-black leading-tight">A Kenyan classic takes shape.</p><p class="mt-4 text-sm font-semibold leading-6 text-manji-blue/75">Built around familiar biscuits, local tea-time rituals and a distinctive blue-and-yellow signature.</p>
+</div>
+<div class="heritage-card absolute bottom-4 right-0 w-[76%] rotate-[5deg] rounded-[2.2rem] border border-white/15 bg-white/10 p-7 shadow-[0_35px_80px_rgba(0,0,0,.2)] backdrop-blur-xl sm:p-9">
+<p class="text-xs font-extrabold uppercase tracking-[.2em] text-manji-yellow">Today</p><p class="mt-3 font-display text-4xl font-black leading-tight">Still part of the moment.</p><p class="mt-4 text-sm font-medium leading-6 text-blue-100/80">A broad range now spans everyday biscuits, indulgent chocolate treats, cookies, wafers and snacks.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-20 sm:py-24">
+<div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-8">
+<div class="section-heading mx-auto max-w-3xl text-center">
+<p class="text-xs font-extrabold uppercase tracking-[.22em] text-manji-red">Proof in the legacy</p>
+<h2 class="font-display text-4xl font-black tracking-[-.045em] text-manji-blue sm:text-5xl mt-3">A brand measured in generations.</h2>
+</div>
+<div class="grid gap-4 md:grid-cols-3 mt-9">
+<article class="stat-card rounded-[2rem] bg-manji-cream p-7 sm:p-8">
+<div class="stat-icon grid size-12 place-items-center rounded-2xl bg-manji-blue text-white transition duration-300"><i class="size-5" data-lucide="history"></i></div>
+<p class="font-display text-6xl font-black tracking-[-.06em] text-manji-blue mt-6">70+</p><h3 class="mt-2 text-lg font-extrabold text-manji-ink">Years of biscuit heritage</h3><p class="mt-2 text-sm leading-6 text-slate-600">A legacy that reaches back to 1954 and continues through today's product range.</p>
+</article>
+<article class="stat-card rounded-[2rem] bg-manji-yellow p-7 sm:p-8">
+<div class="stat-icon grid size-12 place-items-center rounded-2xl bg-manji-red text-white transition duration-300"><i class="size-5" data-lucide="map"></i></div>
+<p class="font-display text-6xl font-black tracking-[-.06em] text-manji-blue mt-6">4</p><h3 class="mt-2 text-lg font-extrabold text-manji-ink">East African markets</h3><p class="mt-2 text-sm leading-6 text-manji-blue/75">The brand's popularity extends from Kenya into Uganda, Tanzania and Rwanda.</p>
+</article>
+<article class="stat-card rounded-[2rem] bg-manji-blue p-7 text-white sm:p-8">
+<div class="stat-icon grid size-12 place-items-center rounded-2xl bg-white text-manji-blue transition duration-300"><i class="size-5" data-lucide="medal"></i></div>
+<p class="font-display text-5xl font-black tracking-[-.05em] text-manji-yellow mt-6">Gold</p><h3 class="mt-2 text-lg font-extrabold">Award-winning heritage</h3><p class="mt-2 text-sm leading-6 text-blue-100/80">Traditional favourites have earned international recognition, including Le Monde Selection Gold medals.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="relative overflow-hidden bg-manji-cream py-20 sm:py-24" id="contact">
+<div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-8">
+<div class="contact-panel relative overflow-hidden rounded-[2.5rem] bg-manji-yellow px-6 shadow-[0_30px_80px_rgba(6,43,120,.12)] sm:px-10 lg:px-14 py-8 sm:py-10">
+<div class="absolute -right-24 -top-28 size-[24rem] rounded-full bg-white/40 blur-2xl"></div>
+<div class="absolute -bottom-32 left-1/3 size-[20rem] rounded-full bg-manji-red/12 blur-3xl"></div>
+<div class="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+<div class="max-w-3xl">
+<p class="text-xs font-extrabold uppercase tracking-[.22em] text-manji-red">Let's talk biscuits</p>
+<h2 class="mt-4 font-display text-4xl font-black tracking-[-.05em] text-manji-blue sm:text-6xl">Stockist, distributor or just craving a classic?</h2>
+<p class="mt-5 max-w-2xl text-base font-medium leading-7 text-manji-blue/75">Reach the Manji team in Nairobi for product, distribution and general enquiries.</p>
+</div>
+<div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
+<a class="btn-sheen inline-flex items-center justify-center gap-2 rounded-full bg-manji-blue px-6 py-4 font-extrabold text-white transition hover:-translate-y-1 hover:bg-manji-blue-2" href="mailto:info@manji.co.ke"><i class="size-4" data-lucide="mail"></i> Email Manji</a>
+<a class="inline-flex items-center justify-center gap-2 rounded-full border border-manji-blue/20 bg-white/65 px-6 py-4 font-extrabold text-manji-blue transition hover:-translate-y-1 hover:bg-white" href="tel:+254722203626"><i class="size-4" data-lucide="phone"></i> +254 722 203 626</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-manji-ink text-white">
+<div class="mx-auto max-w-7xl px-5 sm:px-7 lg:px-8 py-10">
+<div class="grid border-b border-white/10 md:grid-cols-[1.4fr_.8fr_.8fr] gap-8 pb-8">
+<div class="max-w-md">
+<img alt="Manji - Est. 1954" width="237" height="118" loading="lazy" decoding="async" class="h-[58px] w-auto max-w-[150px] object-contain" src="assets/images/manji-logo.png"/>
+<p class="mt-5 text-sm leading-6 text-slate-300">Manji Food Industries Limited<br/>Industrial Area, Nairobi, Kenya</p>
+</div>
+<div><p class="text-xs font-extrabold uppercase tracking-[.18em] text-manji-yellow">Explore</p><div class="mt-4 grid gap-3 text-sm font-semibold text-slate-300"><a class="hover:text-white" href="#range">Our range</a><a class="hover:text-white" href="#heritage">Heritage</a><a class="hover:text-white" href="#quality">Why Manji</a><a class="hover:text-white" href="#contact">Contact</a></div></div>
+<div><p class="text-xs font-extrabold uppercase tracking-[.18em] text-manji-yellow">Follow</p><div class="mt-4 flex gap-3"><a aria-label="Facebook" class="grid size-11 place-items-center rounded-full bg-white/10 transition hover:-translate-y-1 hover:bg-manji-blue" href="https://www.facebook.com/manjifoodindustriesltdKE/" rel="noopener" target="_blank"><i class="size-4" data-lucide="share-2"></i></a><a aria-label="Instagram" class="grid size-11 place-items-center rounded-full bg-white/10 transition hover:-translate-y-1 hover:bg-manji-red" href="https://www.instagram.com/manjifoodindustries1954/" rel="noopener" target="_blank"><i class="size-4" data-lucide="camera"></i></a><a aria-label="LinkedIn" class="grid size-11 place-items-center rounded-full bg-white/10 transition hover:-translate-y-1 hover:bg-manji-blue-2" href="https://www.linkedin.com/company/manji-food-industries-limited/" rel="noopener" target="_blank"><i class="size-4" data-lucide="briefcase-business"></i></a></div></div>
+</div>
+<div class="flex flex-col gap-3 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between pt-6"><p>© <span id="year"></span> Manji Food Industries Limited. Concept redesign.</p><p>Single-file static build • Vercel-ready</p></div>
+</div>
+</footer>
+</div>
+
+<!-- Floating product helper. Scripted front-end answers only; no user message is sent to a server. -->
+<aside class="chat-shell fixed z-[75] flex flex-col items-end gap-3" id="manjiChat" aria-label="Manji product help">
+  <div class="chat-nudge is-hidden rounded-2xl border border-manji-blue/10 bg-white px-4 py-2.5 text-sm font-extrabold text-manji-blue shadow-[0_14px_40px_rgba(6,43,120,.14)]" id="chatNudge" aria-hidden="true">Any questions?</div>
+  <section class="chat-panel invisible pointer-events-none absolute bottom-[4.75rem] right-0 translate-y-3 scale-[.97] overflow-hidden rounded-[1.75rem] border border-manji-blue/10 bg-manji-cream opacity-0 shadow-[0_28px_90px_rgba(6,43,120,.22)] transition duration-300" id="chatPanel" role="dialog" aria-modal="false" aria-labelledby="chatTitle">
+    <header class="flex items-center justify-between gap-4 bg-manji-blue px-4 py-4 text-white">
+      <div class="flex items-center gap-3">
+        <span class="grid size-10 place-items-center rounded-xl bg-manji-yellow text-manji-blue"><i class="size-5" data-lucide="bot"></i></span>
+        <div><p class="font-display text-base font-black" id="chatTitle">Ask Manji</p><p class="text-[11px] font-semibold text-blue-100">Product helper</p></div>
+      </div>
+      <button class="grid size-9 place-items-center rounded-full bg-white/10 transition hover:bg-white/20 focus:outline-none focus:ring-4 focus:ring-manji-yellow/30" id="chatClose" type="button" aria-label="Close product helper"><i class="size-4" data-lucide="x"></i></button>
+    </header>
+    <div class="flex max-h-[330px] min-h-[220px] flex-col gap-2.5 overflow-y-auto bg-[#fffaf0] p-4" id="chatMessages" aria-live="polite" aria-label="Conversation">
+      <div class="chat-bubble bot">Hi! Have any questions about Manji or our featured biscuits? I can help with Duos, Sesamix, Digestive, heritage or contact details.</div>
+    </div>
+    <div class="border-t border-manji-blue/10 bg-white/80 p-3">
+      <div class="mb-3 flex flex-wrap gap-2" aria-label="Suggested questions">
+        <button type="button" class="chat-quick rounded-full border border-manji-blue/12 bg-white px-3 py-2 text-xs font-extrabold text-manji-blue hover:border-manji-yellow hover:bg-manji-yellow/15" data-chat-question="Tell me about Duos">Duos</button>
+        <button type="button" class="chat-quick rounded-full border border-manji-blue/12 bg-white px-3 py-2 text-xs font-extrabold text-manji-blue hover:border-manji-yellow hover:bg-manji-yellow/15" data-chat-question="Tell me about Sesamix">Sesamix</button>
+        <button type="button" class="chat-quick rounded-full border border-manji-blue/12 bg-white px-3 py-2 text-xs font-extrabold text-manji-blue hover:border-manji-yellow hover:bg-manji-yellow/15" data-chat-question="Tell me about Digestive">Digestive</button>
+        <button type="button" class="chat-quick rounded-full border border-manji-blue/12 bg-white px-3 py-2 text-xs font-extrabold text-manji-blue hover:border-manji-yellow hover:bg-manji-yellow/15" data-chat-question="How can I contact Manji?">Contact</button>
+      </div>
+      <form class="flex items-center gap-2" id="chatForm">
+        <label class="sr-only" for="chatInput">Ask a question about Manji products</label>
+        <input class="min-w-0 flex-1 rounded-full border border-manji-blue/12 bg-white px-4 py-3 text-sm font-medium text-manji-ink outline-none transition placeholder:text-slate-400 focus:border-manji-blue/30 focus:ring-4 focus:ring-manji-yellow/20" id="chatInput" maxlength="180" autocomplete="off" placeholder="Ask about a biscuit…" type="text"/>
+        <button class="grid size-11 shrink-0 place-items-center rounded-full bg-manji-red text-white transition hover:-translate-y-0.5 hover:bg-manji-blue focus:outline-none focus:ring-4 focus:ring-manji-yellow/30" type="submit" aria-label="Send question"><i class="size-4" data-lucide="send"></i></button>
+      </form>
+      <p class="mt-2 px-1 text-[10px] leading-4 text-slate-400">Quick answers are built into this page. For other enquiries, contact Manji directly.</p>
+    </div>
+  </section>
+  <button class="relative grid size-14 place-items-center rounded-full bg-manji-blue text-white shadow-[0_16px_38px_rgba(6,43,120,.3)] transition duration-300 hover:-translate-y-1 hover:bg-manji-red focus:outline-none focus:ring-4 focus:ring-manji-yellow/50" id="chatLauncher" type="button" aria-label="Open Manji product helper" aria-haspopup="dialog" aria-controls="chatPanel" aria-expanded="false">
+    <span class="chat-launcher-ring" aria-hidden="true"></span>
+    <i class="size-6" data-lucide="bot"></i>
+    <span class="absolute -right-0.5 -top-0.5 size-3.5 rounded-full border-2 border-manji-cream bg-manji-yellow" aria-hidden="true"></span>
+  </button>
+</aside>
+
+<div aria-describedby="historyModalDescription" aria-hidden="true" aria-labelledby="historyModalTitle" aria-modal="true" class="pointer-events-none fixed inset-0 z-[90] flex items-end justify-center p-0 opacity-0 transition-opacity duration-300 sm:items-center sm:p-6" id="historyModal" role="dialog">
+<div class="absolute inset-0 bg-manji-ink/80 backdrop-blur-md" id="historyModalBackdrop"></div>
+<div class="relative max-h-[92vh] w-full translate-y-8 overflow-y-auto rounded-t-[2rem] border border-white/15 bg-[#fffaf0] p-5 text-manji-ink shadow-[0_40px_120px_rgba(0,0,0,.45)] opacity-0 sm:max-w-4xl sm:translate-y-0 sm:scale-95 sm:rounded-[2.5rem] sm:p-8 lg:p-10" id="historyModalPanel">
+<div class="flex items-start justify-between gap-6">
+<div class="max-w-2xl">
+<p class="text-xs font-extrabold uppercase tracking-[.22em] text-manji-red">The Manji story</p>
+<h2 class="mt-3 font-display text-4xl font-black leading-[.95] tracking-[-.045em] text-manji-blue sm:text-5xl" id="historyModalTitle">From a Ngara bakery to a Kenyan biscuit icon.</h2>
+</div>
+<button aria-label="Close Manji history" class="grid size-11 shrink-0 place-items-center rounded-full border border-manji-blue/10 bg-white text-manji-blue transition duration-300 hover:rotate-6 hover:bg-manji-blue hover:text-white focus:outline-none focus:ring-4 focus:ring-manji-yellow/40" id="historyModalClose" type="button">
+<i class="size-5" data-lucide="x"></i>
+</button>
+</div>
+<p class="mt-6 max-w-3xl text-base leading-8 text-slate-600" id="historyModalDescription">Manji's official history traces the business back to humble beginnings as a bakery in Ngara, Nairobi, where it manufactured bread. The bakery flourished before wheat rationing disrupted that early chapter. What followed became one of Kenya's most recognisable biscuit stories.</p>
+<div class="mt-9 grid gap-7 lg:grid-cols-[1.05fr_.95fr]">
+<div class="relative border-l-2 border-manji-yellow/80 pl-7">
+<article class="relative pb-8">
+<span class="absolute -left-[2.15rem] top-1 grid size-7 place-items-center rounded-full bg-manji-yellow text-[10px] font-black text-manji-blue ring-4 ring-[#fffaf0]">01</span>
+<p class="text-xs font-extrabold uppercase tracking-[.18em] text-manji-red">Humble beginnings</p>
+<h3 class="mt-2 font-display text-2xl font-black text-manji-blue">A bakery in Ngara</h3>
+<p class="mt-2 text-sm leading-7 text-slate-600">House of Manji began as a bread bakery in Ngara. It built a growing local business before wheat rationing made the bakery business increasingly difficult.</p>
+</article>
+<article class="relative pb-8">
+<span class="absolute -left-[2.15rem] top-1 grid size-7 place-items-center rounded-full bg-manji-red text-[10px] font-black text-white ring-4 ring-[#fffaf0]">02</span>
+<p class="text-xs font-extrabold uppercase tracking-[.18em] text-manji-red">1954</p>
+<h3 class="mt-2 font-display text-2xl font-black text-manji-blue">The biscuit legacy takes shape</h3>
+<p class="mt-2 text-sm leading-7 text-slate-600">The Manji name became closely associated with biscuit manufacturing in Kenya, building a tradition that would stretch across generations and become part of everyday tea-time culture.</p>
+</article>
+<article class="relative">
+<span class="absolute -left-[2.15rem] top-1 grid size-7 place-items-center rounded-full bg-manji-blue text-[10px] font-black text-white ring-4 ring-[#fffaf0]">03</span>
+<p class="text-xs font-extrabold uppercase tracking-[.18em] text-manji-red">November 2002</p>
+<h3 class="mt-2 font-display text-2xl font-black text-manji-blue">A new chapter under Manji Food Industries</h3>
+<p class="mt-2 text-sm leading-7 text-slate-600">Manji Food Industries Limited took over the mantle in November 2002 under the chairmanship of Dr. H. P. Dawda, beginning a renewed chapter for the company and its much-loved biscuit portfolio.</p>
+</article>
+</div>
+<aside class="rounded-[2rem] bg-manji-blue p-6 text-white sm:p-7">
+<div class="flex size-12 items-center justify-center rounded-2xl bg-manji-yellow text-manji-blue"><i class="size-6" data-lucide="cookie"></i></div>
+<p class="mt-6 text-xs font-extrabold uppercase tracking-[.2em] text-manji-yellow">The legacy today</p>
+<h3 class="mt-3 font-display text-3xl font-black leading-tight">More than seven decades around the table.</h3>
+<p class="mt-4 text-sm leading-7 text-blue-100/85">Across biscuits, cookies, wafers and cakes, Manji continues a heritage built around familiar favourites, consistent quality and products shared by families across generations.</p>
+<div class="mt-6 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/10 p-4">
+<div class="grid size-10 shrink-0 place-items-center rounded-xl bg-white/10"><i class="size-5 text-manji-yellow" data-lucide="map-pin"></i></div>
+<div><p class="text-xs font-bold uppercase tracking-[.16em] text-blue-200">Rooted in</p><p class="mt-1 font-bold">Nairobi, Kenya</p></div>
+</div>
+<p class="mt-5 text-xs leading-5 text-blue-200/75">History adapted from Manji Food Industries' official company history.</p>
+</aside>
+</div>
+</div>
+</div>
+<div class="pointer-events-none fixed bottom-5 left-1/2 z-[80] flex -translate-x-1/2 translate-y-6 items-center gap-2 rounded-full bg-manji-ink px-5 py-3 text-sm font-bold text-white opacity-0 shadow-2xl transition duration-300" id="toast"><i class="size-4 text-manji-yellow" data-lucide="sparkles"></i><span id="toastText">A Manji classic.</span></div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // --- Lightweight client-side access gate ---
+      // The plaintext password is intentionally absent. The verifier is PBKDF2-SHA256.
+      // To rotate the password, recompute the verifier with the same algorithm or replace both salt and verifier.
+      const gate = {
+        salt: new TextEncoder().encode('manji-static-gate-v1-2026'),
+        iterations: 180000,
+        verifierHex: 'b99c370f4fc167c37554e2000d1df85d2eee8effe465806352566209e78b1b68'
+      };
+      const form = document.getElementById('loginForm');
+      const input = document.getElementById('passwordInput');
+      const wrap = document.getElementById('passwordWrap');
+      const error = document.getElementById('loginError');
+      const gateEl = document.getElementById('loginGate');
+      const loginBtn = document.getElementById('loginButton');
+      const toggle = document.getElementById('togglePassword');
+
+      const bytesToHex = bytes => Array.from(new Uint8Array(bytes)).map(b => b.toString(16).padStart(2,'0')).join('');
+      async function derive(password) {
+        const material = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveBits']);
+        const bits = await crypto.subtle.deriveBits({ name:'PBKDF2', salt:gate.salt, iterations:gate.iterations, hash:'SHA-256' }, material, 256);
+        return bytesToHex(bits);
+      }
+      function safeEqual(a,b) {
+        if (a.length !== b.length) return false;
+        let diff = 0; for (let i=0;i<a.length;i++) diff |= a.charCodeAt(i)^b.charCodeAt(i); return diff === 0;
+      }
+      function unlock(animate=true) {
+        sessionStorage.setItem('manji-preview-auth','1');
+        document.body.classList.remove('gated');
+        window.setTimeout(() => {
+          const nudge = document.getElementById('chatNudge');
+          const launcher = document.getElementById('chatLauncher');
+          if (nudge && launcher && launcher.getAttribute('aria-expanded') !== 'true') {
+            nudge.setAttribute('aria-hidden','false');
+            nudge.classList.remove('is-hidden');
+          }
+        }, 1800);
+        const refreshScrollMotion = () => requestAnimationFrame(() => {
+          if (window.ScrollTrigger) {
+            ScrollTrigger.refresh(true);
+            requestAnimationFrame(() => ScrollTrigger.update());
+          }
+        });
+        if (animate && window.gsap) {
+          gsap.to(gateEl, { autoAlpha:0, duration:.55, ease:'power2.out', onComplete:()=>{ gateEl.classList.add('hidden-gate'); refreshScrollMotion(); } });
+          gsap.fromTo('#site', { scale:.99 }, { scale:1, duration:.8, ease:'power3.out' });
+        } else {
+          gateEl.classList.add('hidden-gate');
+          refreshScrollMotion();
+        }
+      }
+      if (sessionStorage.getItem('manji-preview-auth') === '1') unlock(false);
+      else setTimeout(()=>input.focus(),250);
+
+      toggle.addEventListener('click', () => {
+        const showing = input.type === 'text'; input.type = showing ? 'password' : 'text';
+        toggle.innerHTML = `<i data-lucide="${showing ? 'eye' : 'eye-off'}" class="size-4"></i>`; lucide.createIcons();
+        toggle.setAttribute('aria-label', showing ? 'Show password' : 'Hide password');
+      });
+      form.addEventListener('submit', async e => {
+        e.preventDefault(); error.textContent=''; wrap.classList.remove('shake');
+        loginBtn.disabled=true; loginBtn.classList.add('opacity-70');
+        loginBtn.querySelector('span').textContent='Checking…';
+        try {
+          const candidate = await derive(input.value);
+          if (safeEqual(candidate, gate.verifierHex)) { unlock(true); input.value=''; }
+          else { error.textContent='That password did not match.'; wrap.classList.add('shake'); input.select(); }
+        } catch(err) {
+          error.textContent='Secure hashing is unavailable in this browser context. Open the page over HTTPS.';
+        } finally {
+          loginBtn.disabled=false; loginBtn.classList.remove('opacity-70'); loginBtn.querySelector('span').textContent='Unlock website';
+        }
+      });
+
+      // --- Mobile navigation ---
+      const menuButton = document.getElementById('menuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      function setMenu(open) {
+        menuButton.classList.toggle('menu-open',open); menuButton.setAttribute('aria-expanded',String(open));
+        mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight+'px' : '0px'; mobileMenu.style.opacity = open ? '1' : '0';
+      }
+      menuButton.addEventListener('click',()=>setMenu(menuButton.getAttribute('aria-expanded')!=='true'));
+      mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+
+
+      // --- Floating Manji product helper ---
+      const chatLauncher = document.getElementById('chatLauncher');
+      const chatPanel = document.getElementById('chatPanel');
+      const chatClose = document.getElementById('chatClose');
+      const chatNudge = document.getElementById('chatNudge');
+      const chatForm = document.getElementById('chatForm');
+      const chatInput = document.getElementById('chatInput');
+      const chatMessages = document.getElementById('chatMessages');
+      let chatOpen = false;
+
+      function setChat(open) {
+        chatOpen = open;
+        chatPanel.classList.toggle('is-open', open);
+        chatLauncher.setAttribute('aria-expanded', String(open));
+        chatLauncher.setAttribute('aria-label', open ? 'Close Manji product helper' : 'Open Manji product helper');
+        chatNudge.classList.add('is-hidden'); chatNudge.setAttribute('aria-hidden','true');
+        if (open) window.setTimeout(() => chatInput.focus(), 180);
+      }
+      function appendChatMessage(text, who='bot') {
+        const bubble = document.createElement('div');
+        bubble.className = `chat-bubble ${who}`;
+        bubble.textContent = text;
+        chatMessages.appendChild(bubble);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+      function helperReply(question) {
+        const q = question.toLowerCase();
+        if (q.includes('duos')) return 'Duos are Manji cream cookies sold in handy 30g and 60g mini packs; a crisp sandwich-style biscuit for quick snack moments.';
+        if (q.includes('sesamix') || q.includes('sesame') || q.includes('simsim')) return 'Sesamix is Manji’s sesame-forward cracker. Manji currently lists a 33g mini pack, making it an easy savoury-leaning snack on the go.';
+        if (q.includes('digestive')) return 'Manji Digestive is a familiar everyday biscuit. The current Manji mini-pack range lists Digestive in a 20g pack.';
+        if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('call')) return 'You can reach Manji Food Industries in Nairobi at info@manji.co.ke or +254 722 203 626.';
+        if (q.includes('where') || q.includes('location') || q.includes('nairobi')) return 'Manji Food Industries is based in Industrial Area, Nairobi, at the junction of Lunga Lunga and Likoni Road.';
+        if (q.includes('history') || q.includes('heritage') || q.includes('1954') || q.includes('old')) return 'The House of Manji brand traces its biscuit heritage to 1954 and has remained a household favourite across generations.';
+        if (q.includes('product') || q.includes('range') || q.includes('biscuit')) return 'This page highlights Duos, Sesamix and Digestive, and the range section below shows more Manji biscuits, cookies, wafers and snack favourites.';
+        return 'I can help with Duos, Sesamix, Digestive, Manji heritage, the product range or contact details. For anything else, email info@manji.co.ke.';
+      }
+      function askHelper(question) {
+        const clean = question.trim();
+        if (!clean) return;
+        appendChatMessage(clean, 'user');
+        chatInput.value = '';
+        window.setTimeout(() => appendChatMessage(helperReply(clean), 'bot'), 180);
+      }
+      chatLauncher.addEventListener('click', () => setChat(!chatOpen));
+      chatClose.addEventListener('click', () => { setChat(false); chatLauncher.focus(); });
+      chatForm.addEventListener('submit', e => { e.preventDefault(); askHelper(chatInput.value); });
+      document.querySelectorAll('[data-chat-question]').forEach(btn => btn.addEventListener('click', () => askHelper(btn.dataset.chatQuestion || btn.textContent)));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && chatOpen) { setChat(false); chatLauncher.focus(); } });
+      window.setTimeout(() => { if (!chatOpen && !document.body.classList.contains('gated')) { chatNudge.setAttribute('aria-hidden','false'); chatNudge.classList.remove('is-hidden'); } }, 2500);
+
+
+      // --- History modal ---
+      const historyModal = document.getElementById('historyModal');
+      const historyModalPanel = document.getElementById('historyModalPanel');
+      const historyModalOpen = document.getElementById('historyModalOpen');
+      const historyModalClose = document.getElementById('historyModalClose');
+      const historyModalBackdrop = document.getElementById('historyModalBackdrop');
+      let historyModalReturnFocus = null;
+
+      function openHistoryModal() {
+        historyModalReturnFocus = document.activeElement;
+        historyModal.classList.remove('pointer-events-none');
+        historyModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        if (window.gsap && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          gsap.killTweensOf([historyModal, historyModalPanel]);
+          gsap.to(historyModal, { autoAlpha: 1, duration: .25, ease: 'power2.out' });
+          gsap.fromTo(historyModalPanel, { autoAlpha: 0, y: 28, scale: .965 }, { autoAlpha: 1, y: 0, scale: 1, duration: .48, ease: 'power3.out' });
+        } else {
+          historyModal.classList.remove('opacity-0');
+          historyModalPanel.classList.remove('opacity-0', 'translate-y-8', 'sm:scale-95');
+        }
+        window.setTimeout(() => historyModalClose.focus(), 80);
+      }
+
+      function closeHistoryModal() {
+        const complete = () => {
+          historyModal.classList.add('pointer-events-none', 'opacity-0');
+          historyModal.setAttribute('aria-hidden', 'true');
+          historyModalPanel.classList.add('opacity-0', 'translate-y-8', 'sm:scale-95');
+          document.body.style.overflow = '';
+          if (historyModalReturnFocus && typeof historyModalReturnFocus.focus === 'function') historyModalReturnFocus.focus();
+        };
+        if (window.gsap && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          gsap.killTweensOf([historyModal, historyModalPanel]);
+          gsap.to(historyModalPanel, { autoAlpha: 0, y: 22, scale: .975, duration: .22, ease: 'power2.in' });
+          gsap.to(historyModal, { autoAlpha: 0, duration: .25, ease: 'power2.in', onComplete: complete });
+        } else complete();
+      }
+
+      historyModalOpen.addEventListener('click', openHistoryModal);
+      historyModalClose.addEventListener('click', closeHistoryModal);
+      historyModalBackdrop.addEventListener('click', closeHistoryModal);
+      historyModal.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeHistoryModal();
+        if (e.key === 'Tab') {
+          const focusable = [...historyModal.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled && el.offsetParent !== null);
+          if (!focusable.length) return;
+          const first = focusable[0], last = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      });
+
+      // --- Product filtering ---
+      const filterButtons = [...document.querySelectorAll('.filter-btn')];
+      const productCards = [...document.querySelectorAll('.product-card')];
+      filterButtons.forEach(btn => btn.addEventListener('click', () => {
+        const filter=btn.dataset.filter;
+        filterButtons.forEach(b=>{ b.classList.remove('active','bg-manji-blue','text-white'); b.classList.add('border','border-manji-blue/12','bg-white/70','text-manji-blue'); });
+        btn.classList.add('active','bg-manji-blue','text-white'); btn.classList.remove('border','border-manji-blue/12','bg-white/70','text-manji-blue');
+        productCards.forEach(card => {
+          const show = filter==='All' || card.dataset.category===filter;
+          if (window.gsap) {
+            gsap.killTweensOf(card);
+            if (show) {
+              card.style.display='block';
+              gsap.fromTo(card,{scale:.975,y:8},{scale:1,y:0,duration:.28,ease:'power2.out',clearProps:'transform'});
+            } else {
+              card.style.display='none';
+              gsap.set(card,{clearProps:'transform,opacity,visibility'});
+            }
+          } else card.style.display=show?'block':'none';
+        });
+        if (window.ScrollTrigger) requestAnimationFrame(()=>ScrollTrigger.refresh());
+      }));
+
+      const toast=document.getElementById('toast'), toastText=document.getElementById('toastText');
+      let toastTimer;
+      document.querySelectorAll('.product-nudge').forEach(btn=>btn.addEventListener('click',()=>{
+        const name=btn.closest('.product-card').querySelector('h3').textContent; toastText.textContent=`${name} - a Manji classic.`;
+        clearTimeout(toastTimer); toast.classList.remove('opacity-0','translate-y-6'); toast.classList.add('opacity-100','translate-y-0');
+        toastTimer=setTimeout(()=>{toast.classList.add('opacity-0','translate-y-6');toast.classList.remove('opacity-100','translate-y-0')},1800);
+      }));
+
+      // --- GSAP motion & parallax ---
+      if (window.gsap && window.ScrollTrigger && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.set('.hero-kicker,.hero-copy,.hero-actions,.hero-proof',{opacity:0,y:20});
+        gsap.set('.reveal-line > span',{yPercent:110});
+        const intro=gsap.timeline({defaults:{ease:'power3.out'}});
+        intro.to('.reveal-line > span',{yPercent:0,duration:1.05,stagger:.12},.1)
+             .to('.hero-kicker',{opacity:1,y:0,duration:.7},.15)
+             .to('.hero-copy',{opacity:1,y:0,duration:.8},.38)
+             .to('.hero-actions',{opacity:1,y:0,duration:.75},.48)
+             .to('.hero-proof',{opacity:1,y:0,duration:.75},.6)
+             .from('.hero-stage',{opacity:0,y:28,scale:.965,duration:1.05},.18)
+             .from('.hero-product-wrap',{opacity:0,y:50,scale:.84,duration:1.08,stagger:.13},.28)
+             .from('.hero-product-tag',{opacity:0,y:10,scale:.9,duration:.55,stagger:.08},.82)
+             .from('.hero-seal',{opacity:0,scale:.72,duration:.68},.9);
+
+        // Keep Digestive gently in motion while preserving the established Manji visual language.
+        gsap.to('.hero-digestive .hero-product',{y:-12,rotation:1.4,scale:1.025,duration:5.2,repeat:-1,yoyo:true,ease:'sine.inOut'});
+        gsap.to('#heroArt',{yPercent:11,ease:'none',scrollTrigger:{trigger:'#home',start:'top top',end:'bottom top',scrub:true}});
+        gsap.to('.hero-orb',{yPercent:35,ease:'none',scrollTrigger:{trigger:'#home',start:'top top',end:'bottom top',scrub:true}});
+
+        // Pointer-driven depth on the hero artwork. The stage also carries a subtle brand-yellow hotspot.
+        const heroStage=document.querySelector('.hero-stage');
+        const depthItems=[...document.querySelectorAll('.hero-product-wrap[data-depth]')];
+        if (heroStage) {
+          heroStage.addEventListener('pointermove',e=>{
+            const r=heroStage.getBoundingClientRect();
+            const nx=(e.clientX-r.left)/r.width-.5, ny=(e.clientY-r.top)/r.height-.5;
+            heroStage.style.setProperty('--mx',`${((e.clientX-r.left)/r.width)*100}%`);
+            heroStage.style.setProperty('--my',`${((e.clientY-r.top)/r.height)*100}%`);
+            depthItems.forEach(el=>{
+              const depth=Number(el.dataset.depth||.5);
+              gsap.to(el,{x:nx*20*depth,y:ny*16*depth,duration:.85,ease:'power3.out',overwrite:'auto'});
+            });
+          });
+          heroStage.addEventListener('pointerleave',()=>{
+            heroStage.style.setProperty('--mx','52%'); heroStage.style.setProperty('--my','42%');
+            depthItems.forEach(el=>gsap.to(el,{x:0,y:0,duration:1.05,ease:'power3.out',overwrite:'auto'}));
+          });
+        }
+
+        // Scroll reveals are transform-only so content never becomes invisible if
+        // ScrollTrigger initializes while the password gate is covering the page.
+        gsap.utils.toArray('.section-heading').forEach(el=>gsap.from(el,{y:28,duration:.82,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+        gsap.from('.feature-card',{y:30,stagger:.08,duration:.72,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:'#quality',start:'top 78%',once:true}});
+        gsap.from('.trio-card',{y:36,stagger:.12,duration:.82,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:'#featured-trio',start:'top 76%',once:true}});
+        gsap.utils.toArray('.trio-card-art .trio-product').forEach(img=>gsap.fromTo(img,{yPercent:-3},{yPercent:3,ease:'none',scrollTrigger:{trigger:img.closest('.trio-card'),start:'top bottom',end:'bottom top',scrub:true}}));
+        gsap.from('.product-card',{y:30,stagger:.045,duration:.68,ease:'power3.out',immediateRender:false,clearProps:'transform',scrollTrigger:{trigger:'#productGrid',start:'top 88%',once:true}});
+        gsap.from('.heritage-copy',{x:-28,duration:.9,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:'#heritage',start:'top 78%',once:true}});
+        gsap.from('.heritage-card',{y:36,rotation:'-=4',stagger:.14,duration:.92,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:'#heritage',start:'top 80%',once:true}});
+        gsap.to('.heritage-card:first-child',{y:-30,ease:'none',scrollTrigger:{trigger:'#heritage',start:'top bottom',end:'bottom top',scrub:true}});
+        gsap.to('.heritage-card:last-child',{y:24,ease:'none',scrollTrigger:{trigger:'#heritage',start:'top bottom',end:'bottom top',scrub:true}});
+        gsap.from('.stat-card',{y:28,stagger:.1,duration:.72,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:'.stat-card',start:'top 88%',once:true}});
+        gsap.from('.contact-panel',{y:32,scale:.99,duration:.85,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:'#contact',start:'top 88%',once:true}});
+      }
+
+      // Compact sticky nav on downward scroll.
+      let lastY=window.scrollY;
+      const navbar=document.getElementById('navbar');
+      window.addEventListener('scroll',()=>{ const y=window.scrollY; if(y>180 && y>lastY) navbar.style.transform='translateY(-100%)'; else navbar.style.transform='translateY(0)'; lastY=y; },{passive:true});
+    });
+  </script>
+</body>
+</html>
