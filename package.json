@@ -1,0 +1,12 @@
+{
+  "name": "manji-reimagined-catalogue",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Manji website with a filesystem-backed catalogue admin route.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
