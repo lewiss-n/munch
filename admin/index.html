@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Catalogue Admin — Manji</title>
+  <style>
+    :root{--offwhite:#f7f3e8;--paper:#fffdf7;--ink:#121214;--muted:#706d66;--blue:#2e3192;--blue-deep:#17195f;--yellow:#f8eb07;--line:rgba(18,18,20,.16);--shadow:0 24px 70px rgba(18,18,20,.12);--radius:30px}
+    *{box-sizing:border-box}
+    html{background:var(--offwhite)}
+    body{margin:0;background:var(--offwhite);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100%;}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    img{max-width:100%;display:block}
+    .shell{width:min(1120px,calc(100% - 36px));margin:auto}
+    header{border-bottom:1px solid var(--line);padding:22px 0;background:rgba(247,243,232,.9);position:sticky;top:0;z-index:20;backdrop-filter:blur(16px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:13px;min-width:0}
+    .brand-mark{width:48px;height:48px;border-radius:15px;background:var(--blue);color:white;display:grid;place-items:center;font-size:1.35rem;font-weight:900;box-shadow:0 5px 0 rgba(23,25,95,.2)}
+    .brand strong{display:block;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase}
+    .brand span{display:block;color:var(--muted);font-size:.76rem;margin-top:3px}
+    .back{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-weight:800;font-size:.78rem;text-decoration:none;border-bottom:2px solid currentColor;padding:5px 0}
+    main{padding:68px 0 90px}
+    .hero{display:grid;grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr);gap:44px;align-items:start}
+    .eyebrow{margin:0 0 12px;color:var(--blue);font-size:.72rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    h1{font-size:clamp(3.25rem,7vw,6.7rem);line-height:.82;letter-spacing:-.045em;text-transform:uppercase;margin:0 0 22px;max-width:650px}
+    .lede{color:var(--muted);font-weight:600;line-height:1.7;max-width:560px;margin:0 0 28px}
+    .stats{display:flex;flex-wrap:wrap;gap:9px}
+    .stat{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-size:.75rem;font-weight:800;color:var(--muted)}
+    .stat b{color:var(--blue)}
+    .panel{background:var(--paper);border:2px solid var(--ink);border-radius:var(--radius);box-shadow:0 10px 0 rgba(18,18,20,.1),var(--shadow);padding:28px}
+    .panel-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}
+    .panel-head strong{font-size:1.05rem;letter-spacing:.04em}
+    .write-badge{font-size:.65rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;background:var(--yellow);border:1.5px solid var(--ink);border-radius:999px;padding:8px 11px;white-space:nowrap}
+    form{display:grid;gap:17px}
+    label{display:grid;gap:7px;font-size:.72rem;font-weight:900;letter-spacing:.075em;text-transform:uppercase}
+    input,select{width:100%;min-height:52px;border:1.5px solid var(--ink);border-radius:16px;background:white;color:var(--ink);padding:0 14px;outline:none;font-size:1rem}
+    input:focus,select:focus{box-shadow:0 0 0 4px rgba(248,235,7,.65)}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .drop{position:relative;border:2px dashed rgba(18,18,20,.38);border-radius:22px;background:var(--offwhite);min-height:220px;display:grid;place-items:center;text-align:center;padding:22px;transition:.2s ease;overflow:hidden}
+    .drop.dragging{border-color:var(--blue);background:#f0effc}
+    .drop input{position:absolute;inset:0;opacity:0;cursor:pointer;min-height:100%}
+    .drop-copy{pointer-events:none;display:grid;place-items:center;gap:8px;color:var(--muted);font-size:.82rem;font-weight:650}
+    .drop-icon{width:58px;height:58px;border-radius:18px;background:var(--blue);color:white;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 5px 0 rgba(23,25,95,.2)}
+    .drop-copy strong{color:var(--ink);font-size:.95rem}
+    .preview{position:absolute;inset:0;background:var(--offwhite);display:none;align-items:center;justify-content:center;padding:16px;pointer-events:none}
+    .preview.show{display:flex}
+    .preview img{width:100%;height:100%;max-height:220px;object-fit:contain;filter:drop-shadow(0 16px 18px rgba(18,18,20,.16))}
+    .file-pill{position:absolute;left:12px;bottom:12px;right:12px;padding:8px 11px;border-radius:12px;background:rgba(255,253,247,.94);border:1px solid var(--line);font-size:.68rem;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:none}
+    .file-pill.show{display:block}
+    .submit{min-height:62px;border:2px solid var(--ink);border-radius:18px;background:var(--yellow);color:var(--ink);box-shadow:0 7px 0 rgba(18,18,20,.2);font-weight:950;letter-spacing:.05em;text-transform:uppercase;transition:.2s ease}
+    .submit:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 10px 0 rgba(18,18,20,.16)}
+    .submit:disabled{opacity:.6;cursor:wait}
+    .message{min-height:22px;margin:2px 0 0;font-size:.78rem;font-weight:750;line-height:1.45}
+    .message.error{color:#a32222}.message.success{color:#146a3b}
+    .note{margin-top:19px;padding:14px 15px;border-radius:16px;border:1px solid var(--line);background:var(--offwhite);font-size:.75rem;color:var(--muted);line-height:1.55}
+    .note code{color:var(--blue);font-weight:800}
+    .section-manager{margin-top:54px;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:24px}
+    .section-manager-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}
+    .section-manager h2{margin:0;font-size:1.65rem;text-transform:uppercase;letter-spacing:-.03em}
+    .section-create-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end}
+    .section-create-form button{min-height:52px;border:1.5px solid var(--blue);border-radius:16px;background:var(--blue);color:white;padding:0 20px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+    .section-create-form button:disabled{opacity:.55;cursor:wait}
+    .section-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}
+    .section-chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;background:var(--offwhite);padding:8px 11px;font-size:.72rem;font-weight:850}
+    .section-chip b{color:var(--blue)}
+    .section-message{min-height:20px;margin:10px 0 0;font-size:.75rem;font-weight:800}
+    .section-message.error{color:#a32222}.section-message.success{color:#146a3b}
+    .recent{margin-top:54px;border-top:1px solid var(--line);padding-top:34px}
+    .recent-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:18px}
+    .recent h2{margin:0;font-size:2rem;text-transform:uppercase;letter-spacing:-.03em}
+    .recent small{color:var(--muted);font-weight:700}
+    .product-list{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .mini-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:14px;min-width:0}
+    .mini-image{height:116px;display:grid;place-items:center;background:var(--offwhite);border-radius:14px;margin-bottom:11px;overflow:hidden}
+    .mini-image img{width:100%;height:100%;object-fit:contain;padding:8px}
+    .mini-card strong{display:block;font-size:.78rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .mini-card span{display:block;margin-top:4px;color:var(--muted);font-size:.67rem;font-weight:750;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .mini-card{display:flex;flex-direction:column}
+    .mini-card-copy{min-width:0}
+    .product-editor{display:grid;gap:9px;margin-top:12px;padding-top:11px;border-top:1px solid var(--line)}
+    .product-editor label{font-size:.59rem;letter-spacing:.07em;color:var(--muted);gap:5px}
+    .product-editor input,.product-editor select{min-height:38px;border-radius:11px;border-color:var(--line);background:white;padding:0 10px;font-size:.7rem;font-weight:800}
+    .product-editor input[type="file"]{min-height:42px;padding:6px;font-size:.62rem;color:var(--muted)}
+    .product-editor input[type="file"]::file-selector-button{height:28px;border:0;border-radius:8px;background:var(--offwhite);color:var(--blue);font-weight:900;margin-right:7px;cursor:pointer}
+    .edit-image-note{margin:0;color:var(--muted);font-size:.61rem;font-weight:700;line-height:1.4;text-transform:none;letter-spacing:0}
+    .mini-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:9px}
+    .save-product-button{min-height:36px;border:1.5px solid var(--blue);border-radius:11px;background:var(--blue);color:white;padding:0 11px;font-size:.64rem;font-weight:950;letter-spacing:.045em;text-transform:uppercase;transition:.18s ease;flex:1}
+    .save-product-button:hover:not(:disabled){background:var(--blue-deep);transform:translateY(-1px)}
+    .save-product-button:disabled{opacity:.42;cursor:default;transform:none}
+    .delete-button{min-height:36px;border:1.5px solid #a32222;border-radius:11px;background:transparent;color:#a32222;padding:0 11px;font-size:.66rem;font-weight:950;letter-spacing:.055em;text-transform:uppercase;transition:.18s ease;flex:none}
+    .delete-button:hover:not(:disabled){background:#a32222;color:white;transform:translateY(-1px)}
+    .delete-button:disabled{opacity:.5;cursor:wait}
+    .catalogue-toolbar{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:10px;margin:0 0 14px}
+    .catalogue-toolbar input,.catalogue-toolbar select{min-height:46px;border-color:var(--line);background:var(--paper);font-size:.86rem}
+    .manage-message{min-height:22px;margin:10px 0 0;font-size:.76rem;font-weight:800}
+    .manage-message.error{color:#a32222}.manage-message.success{color:#146a3b}
+    .empty-manage{grid-column:1/-1;padding:34px;border:1px dashed var(--line);border-radius:20px;color:var(--muted);font-weight:750;text-align:center;background:rgba(255,253,247,.55)}
+    .security{margin-top:28px;padding:17px 18px;border:1px solid rgba(46,49,146,.2);border-radius:18px;background:rgba(46,49,146,.055);color:var(--muted);font-size:.75rem;line-height:1.55}
+    .security strong{color:var(--blue)}
+    @media(max-width:860px){.hero{grid-template-columns:1fr}.panel{max-width:650px}.product-list{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.section-create-form{grid-template-columns:1fr}.section-create-form button{width:100%}.shell{width:min(100% - 24px,1120px)}header{padding:15px 0}.brand span{display:none}.back{font-size:.7rem}main{padding-top:42px}.panel{padding:20px;border-radius:24px}.two{grid-template-columns:1fr}.product-list{grid-template-columns:1fr 1fr}.mini-image{height:96px}h1{font-size:3.7rem}.write-badge{display:none}.catalogue-toolbar{grid-template-columns:1fr}.mini-actions{display:grid;grid-template-columns:1fr}.delete-button,.save-product-button{width:100%}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">M</div>
+        <div><strong>Catalogue Admin</strong><span>Manji product library</span></div>
+      </div>
+      <a class="back" href="/">← View website</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Direct catalogue publishing</p>
+          <h1>Manage the catalogue.</h1>
+          <p class="lede">Add new products directly to the website, edit existing product names, pack sizes, images and catalogue sections, or remove products that are no longer part of the catalogue. Duplicate name + pack combinations are blocked automatically.</p>
+          <div class="stats">
+            <span class="stat"><b id="totalCount">—</b> catalogue products</span>
+            <span class="stat"><b id="sectionCount">—</b> catalogue sections</span>
+            <span class="stat">PNG · JPG · WEBP</span>
+          </div>
+          <div class="security" id="securityNotice"><strong>Admin route:</strong> loading security status…</div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <strong>NEW CATALOGUE PRODUCT</strong>
+            <span class="write-badge">Writes to disk</span>
+          </div>
+          <form id="productForm" enctype="multipart/form-data" novalidate>
+            <label>
+              Product name
+              <input id="name" name="name" maxlength="80" required placeholder="e.g. Vanilla Cream" autocomplete="off" />
+            </label>
+            <div class="two">
+              <label>
+                Pack size / format
+                <input id="pack" name="pack" maxlength="60" placeholder="e.g. 160G" autocomplete="off" />
+              </label>
+              <label>
+                Catalogue section
+                <select id="category" name="category" required><option value="">Loading sections…</option></select>
+              </label>
+            </div>
+            <label>
+              Product image
+              <div class="drop" id="dropZone">
+                <input id="image" name="image" type="file" accept="image/png,image/jpeg,image/webp,.png,.jpg,.jpeg,.webp" required />
+                <div class="drop-copy" id="dropCopy"><span class="drop-icon">＋</span><strong>Drop product image here</strong><span>or tap to choose a file · max 10 MB</span></div>
+                <div class="preview" id="preview"><img id="previewImage" alt="Selected product preview" /></div>
+                <div class="file-pill" id="filePill"></div>
+              </div>
+            </label>
+            <button class="submit" id="submitButton" type="submit">Publish to catalogue</button>
+            <p class="message" id="message" aria-live="polite"></p>
+          </form>
+          <div class="note">Images are saved directly in <code>assets/images/catalogue/</code> and the new product card is written into <code>index.html</code>. Refresh the public site after publishing.</div>
+        </div>
+      </section>
+
+
+      <section class="section-manager" aria-labelledby="sectionManagerTitle">
+        <div class="section-manager-head">
+          <div><p class="eyebrow">Catalogue structure</p><h2 id="sectionManagerTitle">Catalogue sections</h2></div>
+          <small>Create a section, then assign products to it below.</small>
+        </div>
+        <form class="section-create-form" id="sectionForm" novalidate>
+          <label>
+            New section name
+            <input id="sectionName" maxlength="50" required placeholder="e.g. Wafers" autocomplete="off" />
+          </label>
+          <button id="sectionSubmitButton" type="submit">Create section</button>
+        </form>
+        <p class="section-message" id="sectionMessage" aria-live="polite"></p>
+        <div class="section-list" id="sectionList" aria-label="Existing catalogue sections"></div>
+      </section>
+
+      <section class="recent">
+        <div class="recent-head"><div><p class="eyebrow">Catalogue management</p><h2>Add, edit or delete products</h2></div><small id="listStatus">Loading…</small></div>
+        <div class="catalogue-toolbar">
+          <input id="catalogueSearch" type="search" placeholder="Search product or pack size…" aria-label="Search catalogue products" />
+          <select id="catalogueFilter" aria-label="Filter catalogue section"><option value="">All sections</option></select>
+        </div>
+        <p class="manage-message" id="manageMessage" aria-live="polite"></p>
+        <div class="product-list" id="productList"></div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      const form = document.getElementById('productForm');
+      const imageInput = document.getElementById('image');
+      const dropZone = document.getElementById('dropZone');
+      const preview = document.getElementById('preview');
+      const previewImage = document.getElementById('previewImage');
+      const filePill = document.getElementById('filePill');
+      const submitButton = document.getElementById('submitButton');
+      const message = document.getElementById('message');
+      const totalCount = document.getElementById('totalCount');
+      const sectionCount = document.getElementById('sectionCount');
+      const categorySelect = document.getElementById('category');
+      const sectionForm = document.getElementById('sectionForm');
+      const sectionName = document.getElementById('sectionName');
+      const sectionSubmitButton = document.getElementById('sectionSubmitButton');
+      const sectionMessage = document.getElementById('sectionMessage');
+      const sectionList = document.getElementById('sectionList');
+      const productList = document.getElementById('productList');
+      const listStatus = document.getElementById('listStatus');
+      const securityNotice = document.getElementById('securityNotice');
+      const catalogueSearch = document.getElementById('catalogueSearch');
+      const catalogueFilter = document.getElementById('catalogueFilter');
+      const manageMessage = document.getElementById('manageMessage');
+      let previewUrl = null;
+      let catalogueProducts = [];
+      let catalogueSections = [];
+
+      const setMessage = (text, type = '') => {
+        message.textContent = text;
+        message.className = `message ${type}`.trim();
+      };
+
+      const updatePreview = () => {
+        const file = imageInput.files && imageInput.files[0];
+        if (previewUrl) URL.revokeObjectURL(previewUrl);
+        previewUrl = null;
+        if (!file) {
+          preview.classList.remove('show');
+          filePill.classList.remove('show');
+          previewImage.removeAttribute('src');
+          return;
+        }
+        previewUrl = URL.createObjectURL(file);
+        previewImage.src = previewUrl;
+        preview.classList.add('show');
+        filePill.textContent = `${file.name} · ${(file.size / 1024 / 1024).toFixed(2)} MB`;
+        filePill.classList.add('show');
+      };
+
+      ['dragenter','dragover'].forEach((eventName) => dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropZone.classList.add('dragging');
+      }));
+      ['dragleave','drop'].forEach((eventName) => dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropZone.classList.remove('dragging');
+      }));
+      dropZone.addEventListener('drop', (event) => {
+        const file = event.dataTransfer?.files?.[0];
+        if (!file) return;
+        const transfer = new DataTransfer();
+        transfer.items.add(file);
+        imageInput.files = transfer.files;
+        updatePreview();
+      });
+      imageInput.addEventListener('change', updatePreview);
+
+      const setManageMessage = (text, type = '') => {
+        manageMessage.textContent = text;
+        manageMessage.className = `manage-message ${type}`.trim();
+      };
+
+      const setSectionMessage = (text, type = '') => {
+        sectionMessage.textContent = text;
+        sectionMessage.className = `section-message ${type}`.trim();
+      };
+
+      const fillSectionSelect = (select, { includeAll = false, selectedValue = '' } = {}) => {
+        const currentValue = selectedValue || select.value;
+        select.replaceChildren();
+        if (includeAll) {
+          const all = document.createElement('option');
+          all.value = '';
+          all.textContent = 'All sections';
+          select.appendChild(all);
+        }
+        catalogueSections.forEach((section) => {
+          const option = document.createElement('option');
+          option.value = section.id;
+          option.textContent = section.label;
+          select.appendChild(option);
+        });
+        if ([...select.options].some((option) => option.value === currentValue)) select.value = currentValue;
+      };
+
+      const renderSections = () => {
+        sectionCount.textContent = String(catalogueSections.length);
+        sectionList.replaceChildren();
+        catalogueSections.forEach((section) => {
+          const count = catalogueProducts.filter((product) => product.category === section.id).length;
+          const chip = document.createElement('span');
+          chip.className = 'section-chip';
+          chip.textContent = section.label;
+          const total = document.createElement('b');
+          total.textContent = String(count);
+          total.title = `${count} product${count === 1 ? '' : 's'} assigned`;
+          chip.appendChild(total);
+          sectionList.appendChild(chip);
+        });
+      };
+
+      const refreshSectionControls = () => {
+        fillSectionSelect(categorySelect);
+        fillSectionSelect(catalogueFilter, { includeAll: true });
+        renderSections();
+      };
+
+      const renderCatalogue = () => {
+        productList.replaceChildren();
+        const query = catalogueSearch.value.trim().toLocaleLowerCase('en');
+        const category = catalogueFilter.value;
+        const visible = catalogueProducts
+          .filter((product) => !category || product.category === category)
+          .filter((product) => {
+            if (!query) return true;
+            return [product.name, product.pack, product.categoryLabel]
+              .some((value) => String(value || '').toLocaleLowerCase('en').includes(query));
+          })
+          .slice()
+          .reverse();
+
+        visible.forEach((product) => {
+          const card = document.createElement('article');
+          card.className = 'mini-card';
+
+          const media = document.createElement('div');
+          media.className = 'mini-image';
+          const img = document.createElement('img');
+          const currentImageSrc = `/${String(product.image || '').replace(/^\/+/, '')}`;
+          img.src = currentImageSrc;
+          img.alt = `${product.name} ${product.pack || ''}`.trim();
+          media.appendChild(img);
+
+          const copy = document.createElement('div');
+          copy.className = 'mini-card-copy';
+          const name = document.createElement('strong');
+          name.textContent = product.name;
+          const meta = document.createElement('span');
+          meta.textContent = `${product.pack || 'NEW'} · ${product.categoryLabel || product.category}`;
+          copy.append(name, meta);
+
+          const editor = document.createElement('div');
+          editor.className = 'product-editor';
+
+          const nameLabel = document.createElement('label');
+          nameLabel.textContent = 'Product name';
+          const nameInput = document.createElement('input');
+          nameInput.type = 'text';
+          nameInput.maxLength = 80;
+          nameInput.required = true;
+          nameInput.value = product.name;
+          nameInput.setAttribute('aria-label', `Product name for ${product.name}`);
+          nameLabel.appendChild(nameInput);
+
+          const packLabel = document.createElement('label');
+          packLabel.textContent = 'Pack size / format';
+          const packInput = document.createElement('input');
+          packInput.type = 'text';
+          packInput.maxLength = 60;
+          packInput.value = product.pack || '';
+          packInput.setAttribute('aria-label', `Pack size or format for ${product.name}`);
+          packLabel.appendChild(packInput);
+
+          const sectionLabel = document.createElement('label');
+          sectionLabel.textContent = 'Catalogue section';
+          const sectionSelect = document.createElement('select');
+          sectionSelect.setAttribute('aria-label', `Catalogue section for ${product.name}`);
+          catalogueSections.forEach((section) => {
+            const option = document.createElement('option');
+            option.value = section.id;
+            option.textContent = section.label;
+            option.selected = product.category === section.id;
+            sectionSelect.appendChild(option);
+          });
+          sectionLabel.appendChild(sectionSelect);
+
+          const imageLabel = document.createElement('label');
+          imageLabel.textContent = 'Replace image (optional)';
+          const editImageInput = document.createElement('input');
+          editImageInput.type = 'file';
+          editImageInput.accept = 'image/png,image/jpeg,image/webp,.png,.jpg,.jpeg,.webp';
+          editImageInput.setAttribute('aria-label', `Replace image for ${product.name}`);
+          const imageNote = document.createElement('p');
+          imageNote.className = 'edit-image-note';
+          imageNote.textContent = 'Choose a new image only if you want to replace the current one · max 10 MB';
+          imageLabel.append(editImageInput, imageNote);
+
+          editor.append(nameLabel, packLabel, sectionLabel, imageLabel);
+
+          const actions = document.createElement('div');
+          actions.className = 'mini-actions';
+          const saveButton = document.createElement('button');
+          saveButton.type = 'button';
+          saveButton.className = 'save-product-button';
+          saveButton.textContent = 'Saved';
+          saveButton.disabled = true;
+          saveButton.setAttribute('aria-label', `Save changes for ${product.name}`);
+
+          const hasChanges = () => (
+            nameInput.value.trim() !== product.name ||
+            packInput.value.trim() !== (product.pack || '') ||
+            sectionSelect.value !== product.category ||
+            Boolean(editImageInput.files?.[0])
+          );
+
+          const syncSaveState = () => {
+            const changed = hasChanges();
+            saveButton.disabled = !changed;
+            saveButton.textContent = changed ? 'Save changes' : 'Saved';
+          };
+
+          [nameInput, packInput].forEach((input) => input.addEventListener('input', syncSaveState));
+          sectionSelect.addEventListener('change', syncSaveState);
+          editImageInput.addEventListener('change', () => {
+            const file = editImageInput.files?.[0];
+            img.src = currentImageSrc;
+            imageNote.textContent = 'Choose a new image only if you want to replace the current one · max 10 MB';
+            if (file) {
+              if (file.size > 10 * 1024 * 1024) {
+                editImageInput.value = '';
+                setManageMessage('Image must be 10 MB or smaller.', 'error');
+                syncSaveState();
+                return;
+              }
+              imageNote.textContent = `${file.name} · ${(file.size / 1024 / 1024).toFixed(2)} MB selected`;
+              const reader = new FileReader();
+              reader.addEventListener('load', () => {
+                if (typeof reader.result === 'string') img.src = reader.result;
+              });
+              reader.readAsDataURL(file);
+            }
+            syncSaveState();
+          });
+
+          saveButton.addEventListener('click', async () => {
+            if (!hasChanges()) return;
+            if (!nameInput.reportValidity() || !packInput.reportValidity()) return;
+            const file = editImageInput.files?.[0];
+            if (file && file.size > 10 * 1024 * 1024) {
+              setManageMessage('Image must be 10 MB or smaller.', 'error');
+              return;
+            }
+
+            const controls = [nameInput, packInput, sectionSelect, editImageInput];
+            controls.forEach((control) => { control.disabled = true; });
+            saveButton.disabled = true;
+            deleteButton.disabled = true;
+            saveButton.textContent = 'Saving…';
+            setManageMessage('');
+
+            const formData = new FormData();
+            formData.append('id', product.id);
+            formData.append('name', nameInput.value);
+            formData.append('pack', packInput.value);
+            formData.append('category', sectionSelect.value);
+            if (file) formData.append('image', file, file.name);
+
+            try {
+              const response = await fetch('/api/admin/products', {
+                method: 'PATCH',
+                body: formData
+              });
+              const data = await response.json().catch(() => ({}));
+              if (!response.ok) throw new Error(data.error || 'Could not update the product.');
+              const warning = data.product?.imageWarning ? ` ${data.product.imageWarning}` : '';
+              setManageMessage(`${data.product.name} was updated.${warning}`, data.product?.imageWarning ? 'error' : 'success');
+              await loadCatalogue({ preserveMessage: true });
+            } catch (error) {
+              setManageMessage(error.message || 'Could not update the product.', 'error');
+              controls.forEach((control) => { control.disabled = false; });
+              deleteButton.disabled = false;
+              syncSaveState();
+            }
+          });
+
+          const deleteButton = document.createElement('button');
+          deleteButton.type = 'button';
+          deleteButton.className = 'delete-button';
+          deleteButton.textContent = 'Delete';
+          deleteButton.setAttribute('aria-label', `Delete ${product.name} ${product.pack || ''}`.trim());
+          deleteButton.addEventListener('click', async () => {
+            const label = `${product.name}${product.pack ? ` (${product.pack})` : ''}`;
+            const confirmed = window.confirm(`Delete ${label} from the catalogue?\n\nThis removes the product from the public website and also deletes its catalogue image file when that image is not used by another product.`);
+            if (!confirmed) return;
+
+            deleteButton.disabled = true;
+            deleteButton.textContent = 'Deleting…';
+            setManageMessage('');
+            try {
+              const response = await fetch('/api/admin/products', {
+                method: 'DELETE',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: product.id })
+              });
+              const data = await response.json().catch(() => ({}));
+              if (!response.ok) throw new Error(data.error || 'Could not delete the product.');
+              const warning = data.product?.imageWarning ? ` ${data.product.imageWarning}` : '';
+              setManageMessage(`${label} was deleted.${warning}`, data.product?.imageWarning ? 'error' : 'success');
+              await loadCatalogue({ preserveMessage: true });
+            } catch (error) {
+              setManageMessage(error.message || 'Could not delete the product.', 'error');
+              deleteButton.disabled = false;
+              deleteButton.textContent = 'Delete';
+            }
+          });
+          actions.append(saveButton, deleteButton);
+          card.append(media, copy, editor, actions);
+          productList.appendChild(card);
+        });
+
+        listStatus.textContent = `${visible.length} of ${catalogueProducts.length} products`;
+        if (!visible.length) {
+          const empty = document.createElement('div');
+          empty.className = 'empty-manage';
+          empty.textContent = catalogueProducts.length ? 'No products match this search.' : 'No catalogue products yet.';
+          productList.appendChild(empty);
+        }
+      };
+
+      const loadCatalogue = async ({ preserveMessage = false } = {}) => {
+        try {
+          const response = await fetch('/api/admin/products', { cache: 'no-store' });
+          if (!response.ok) throw new Error('Could not load catalogue.');
+          const data = await response.json();
+          catalogueProducts = data.products || [];
+          catalogueSections = data.sections || [];
+          totalCount.textContent = String(data.total);
+          refreshSectionControls();
+          renderCatalogue();
+          if (!preserveMessage) setManageMessage('');
+          securityNotice.innerHTML = data.authEnabled
+            ? '<strong>Admin protection is enabled.</strong> Your browser session is authenticated for this route.'
+            : '<strong>Security reminder:</strong> ADMIN_PASSWORD is not set, so anyone who can reach this server can use this admin page. Set it before exposing the site publicly.';
+        } catch (error) {
+          listStatus.textContent = 'Could not load catalogue';
+          securityNotice.innerHTML = '<strong>Connection issue:</strong> this admin page must be opened through the Node server, not directly as a file.';
+        }
+      };
+
+      sectionForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        setSectionMessage('');
+        if (!sectionForm.reportValidity()) return;
+        const name = sectionName.value.trim();
+        sectionSubmitButton.disabled = true;
+        sectionSubmitButton.textContent = 'Creating…';
+        try {
+          const response = await fetch('/api/admin/sections', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name })
+          });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok) throw new Error(data.error || 'Could not create the catalogue section.');
+          await loadCatalogue({ preserveMessage: true });
+          categorySelect.value = data.section.id;
+          sectionName.value = '';
+          setSectionMessage(`${data.section.label} is ready. New and existing products can now be assigned to it.`, 'success');
+        } catch (error) {
+          setSectionMessage(error.message || 'Could not create the catalogue section.', 'error');
+        } finally {
+          sectionSubmitButton.disabled = false;
+          sectionSubmitButton.textContent = 'Create section';
+        }
+      });
+
+      catalogueSearch.addEventListener('input', renderCatalogue);
+      catalogueFilter.addEventListener('change', renderCatalogue);
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        setMessage('');
+        if (!form.reportValidity()) return;
+        const file = imageInput.files?.[0];
+        if (!file) {
+          setMessage('Choose a product image first.', 'error');
+          return;
+        }
+        if (file.size > 10 * 1024 * 1024) {
+          setMessage('Image must be 10 MB or smaller.', 'error');
+          return;
+        }
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Publishing…';
+        const formData = new FormData();
+        formData.append('name', document.getElementById('name').value);
+        formData.append('pack', document.getElementById('pack').value);
+        formData.append('category', document.getElementById('category').value);
+        formData.append('image', file, file.name);
+
+        try {
+          const response = await fetch('/api/admin/products', { method: 'POST', body: formData });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok) throw new Error(data.error || 'Could not publish the product.');
+          setMessage(`${data.product.name} was published. Image saved to ${data.product.image}.`, 'success');
+          form.reset();
+          updatePreview();
+          await loadCatalogue();
+        } catch (error) {
+          setMessage(error.message || 'Could not publish the product.', 'error');
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Publish to catalogue';
+        }
+      });
+
+      loadCatalogue();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "biscuits",
+    "label": "Biscuits"
+  },
+  {
+    "id": "cream-biscuits",
+    "label": "Cream Biscuits"
+  },
+  {
+    "id": "crackers",
+    "label": "Crackers"
+  },
+  {
+    "id": "cookies",
+    "label": "Cookies"
+  },
+  {
+    "id": "budget-packs",
+    "label": "Budget Packs"
+  },
+  {
+    "id": "breakfast-cereals",
+    "label": "Breakfast Cereals"
+  },
+  {
+    "id": "cake",
+    "label": "Cake"
+  },
+  {
+    "id": "tins",
+    "label": "Tins"
+  },
+  {
+    "id": "loose-biscuits",
+    "label": "Loose Biscuits"
+  },
+  {
+    "id": "budget-pack",
+    "label": "Budget Pack"
+  },
+  {
+    "id": "mini-pack",
+    "label": "Mini Pack"
+  },
+  {
+    "id": "jars",
+    "label": "Jars"
+  },
+  {
+    "id": "chocolate-coated",
+    "label": "Chocolate Coated"
+  }
+]
